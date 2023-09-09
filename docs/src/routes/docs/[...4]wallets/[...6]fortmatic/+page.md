@@ -12,14 +12,14 @@ Wallet module for connecting Fortmatic wallets to web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/fortmatic
+yarn add @shinbashi/fortmatic
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/fortmatic
+npm install @shinbashi/fortmatic
 ```
 
   </TabPanel>
@@ -36,8 +36,8 @@ type FortmaticOptions = {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import fortmaticModule from '@web3-onboard/fortmatic'
+import Onboard from '@shinbashi/core'
+import fortmaticModule from '@shinbashi/fortmatic'
 
 const fortmatic = fortmaticModule({ apiKey: 'API_KEY' })
 

@@ -4,8 +4,8 @@ import type {
   ConnectOptions,
   DisconnectOptions,
   WalletState
-} from '@web3-onboard/core'
-import type { WalletInit } from '@web3-onboard/common'
+} from '@shinbashi/core'
+import type { WalletInit } from '@shinbashi/common'
 import { useWeb3Onboard } from '../context.js'
 import { useAppState } from './useAppState.js'
 

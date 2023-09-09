@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { init, useConnectWallet } from '@web3-onboard/react'
-import ledgerModule from '@web3-onboard/ledger'
+import { init, useConnectWallet } from '@shinbashi/react'
+import ledgerModule from '@shinbashi/ledger'
 import styles from '../styles/Home.module.css'
 
 const buttonStyles = {

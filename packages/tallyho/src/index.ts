@@ -1,5 +1,5 @@
-import type { WalletInit } from '@web3-onboard/common'
-import { createEIP1193Provider } from '@web3-onboard/common'
+import type { WalletInit } from '@shinbashi/common'
+import { createEIP1193Provider } from '@shinbashi/common'
 import { CustomWindow } from './types.js'
 import detectEthereumProvider from 'tallyho-detect-provider'
 import TallyHoOnboarding from 'tallyho-onboarding'

@@ -25,43 +25,42 @@ Remember- if you used create-react-app, please follow the [additional setup inst
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/react @web3-onboard/injected-wallets @web3-onboard/infinity-wallet @web3-onboard/fortmatic @web3-onboard/gnosis @web3-onboard/keepkey @web3-onboard/keystone @web3-onboard/ledger @web3-onboard/portis @web3-onboard/trezor @web3-onboard/walletconnect @web3-onboard/coinbase @web3-onboard/magic @web3-onboard/dcent @web3-onboard/sequence @web3-onboard/taho @web3-onboard/trust @web3-onboard/frontier
+yarn add @shinbashi/react @shinbashi/injected-wallets @shinbashi/infinity-wallet @shinbashi/fortmatic @shinbashi/gnosis @shinbashi/keepkey @shinbashi/keystone @shinbashi/ledger @shinbashi/portis @shinbashi/trezor @shinbashi/walletconnect @shinbashi/coinbase @shinbashi/magic @shinbashi/dcent @shinbashi/sequence @shinbashi/taho @shinbashi/trust @shinbashi/frontier
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/react @web3-onboard/injected-wallets @web3-onboard/infinity-wallet @web3-onboard/fortmatic @web3-onboard/gnosis @web3-onboard/keepkey @web3-onboard/keystone @web3-onboard/ledger @web3-onboard/portis @web3-onboard/trezor @web3-onboard/walletconnect @web3-onboard/coinbase @web3-onboard/magic @web3-onboard/dcent @web3-onboard/sequence @web3-onboard/taho @web3-onboard/trust @web3-onboard/frontier
+npm install @shinbashi/react @shinbashi/injected-wallets @shinbashi/infinity-wallet @shinbashi/fortmatic @shinbashi/gnosis @shinbashi/keepkey @shinbashi/keystone @shinbashi/ledger @shinbashi/portis @shinbashi/trezor @shinbashi/walletconnect @shinbashi/coinbase @shinbashi/magic @shinbashi/dcent @shinbashi/sequence @shinbashi/taho @shinbashi/trust @shinbashi/frontier
 ```
 
   </TabPanel>
 </Tabs>
-
 
 ## Step 2: Import + Configure
 
 Import the libraries and any wallets you would like to use. For this example, we are going to use the injected wallets module. You can easily add more wallet support to your dapp via our other wallet modules. Additionally, we'll setup web3-onboard to support 2 chains: Ethereum mainnet and Polygon mainnet.
 
 ```js title="App.tsx"|copy
-import { Web3OnboardProvider, init } from '@web3-onboard/react'
-import injectedModule from '@web3-onboard/injected-wallets'
-import infinityWalletModule from '@web3-onboard/infinity-wallet'
-import fortmaticModule from '@web3-onboard/fortmatic'
-import safeModule from '@web3-onboard/gnosis'
-import keepkeyModule from '@web3-onboard/keepkey'
-import keystoneModule from '@web3-onboard/keystone'
-import ledgerModule from '@web3-onboard/ledger'
-import portisModule from '@web3-onboard/portis'
-import trezorModule from '@web3-onboard/trezor'
-import walletConnectModule from '@web3-onboard/walletconnect'
-import coinbaseModule from '@web3-onboard/coinbase'
-import magicModule from '@web3-onboard/magic'
-import dcentModule from '@web3-onboard/dcent'
-import sequenceModule from '@web3-onboard/sequence'
-import tahoModule from '@web3-onboard/taho'
-import trustModule from '@web3-onboard/trust'
-import frontierModule from '@web3-onboard/frontier'
+import { Web3OnboardProvider, init } from '@shinbashi/react'
+import injectedModule from '@shinbashi/injected-wallets'
+import infinityWalletModule from '@shinbashi/infinity-wallet'
+import fortmaticModule from '@shinbashi/fortmatic'
+import safeModule from '@shinbashi/gnosis'
+import keepkeyModule from '@shinbashi/keepkey'
+import keystoneModule from '@shinbashi/keystone'
+import ledgerModule from '@shinbashi/ledger'
+import portisModule from '@shinbashi/portis'
+import trezorModule from '@shinbashi/trezor'
+import walletConnectModule from '@shinbashi/walletconnect'
+import coinbaseModule from '@shinbashi/coinbase'
+import magicModule from '@shinbashi/magic'
+import dcentModule from '@shinbashi/dcent'
+import sequenceModule from '@shinbashi/sequence'
+import tahoModule from '@shinbashi/taho'
+import trustModule from '@shinbashi/trust'
+import frontierModule from '@shinbashi/frontier'
 import ConnectWallet from './ConnectWallet'
 
 const INFURA_KEY = ''
@@ -192,7 +191,7 @@ In another file we'll create the component that will display our connect wallet 
 
 ```js title="ConnectWallet.tsx"|copy
 import { useEffect, useState } from 'react'
-import { useConnectWallet } from '@web3-onboard/react'
+import { useConnectWallet } from '@shinbashi/react'
 import { ethers } from 'ethers'
 
 export default function ConnectWallet() {
@@ -226,11 +225,11 @@ Now that we have our wallet connected, let's display some basic information, suc
 
 ```js title="ConnectWallet.tsx"|copy{8,10-19,28-37}
 import { useEffect, useState } from 'react'
-import { useConnectWallet } from '@web3-onboard/react'
+import { useConnectWallet } from '@shinbashi/react'
 import { ethers } from 'ethers'
 import type {
     TokenSymbol
-  } from '@web3-onboard/common'
+  } from '@shinbashi/common'
 
 interface Account {
     address: string,
@@ -294,26 +293,26 @@ export default function ConnectWallet() {
 Import the libraries and any wallets you would like to use. For this example, we are going to use the injected wallets module. You can easily add more wallet support to your dapp via our other wallet modules. Additionally, we'll setup web3-onboard to support 2 chains: Ethereum mainnet and Polygon mainnet.
 
 ```js title="onboard.js"|copy
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
-import infinityWalletModule from '@web3-onboard/infinity-wallet'
-import fortmaticModule from '@web3-onboard/fortmatic'
-import safeModule from '@web3-onboard/gnosis'
-import keepkeyModule from '@web3-onboard/keepkey'
-import keystoneModule from '@web3-onboard/keystone'
-import ledgerModule from '@web3-onboard/ledger'
-import portisModule from '@web3-onboard/portis'
-import torusModule from '@web3-onboard/torus'
-import trezorModule from '@web3-onboard/trezor'
-import walletConnectModule from '@web3-onboard/walletconnect'
-import coinbaseModule from '@web3-onboard/coinbase'
-import magicModule from '@web3-onboard/magic'
-import web3authModule from '@web3-onboard/web3auth'
-import dcentModule from '@web3-onboard/dcent'
-import sequenceModule from '@web3-onboard/sequence'
-import tahoModule from '@web3-onboard/taho'
-import trustModule from '@web3-onboard/trust'
-import frontierModule from '@web3-onboard/frontier'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
+import infinityWalletModule from '@shinbashi/infinity-wallet'
+import fortmaticModule from '@shinbashi/fortmatic'
+import safeModule from '@shinbashi/gnosis'
+import keepkeyModule from '@shinbashi/keepkey'
+import keystoneModule from '@shinbashi/keystone'
+import ledgerModule from '@shinbashi/ledger'
+import portisModule from '@shinbashi/portis'
+import torusModule from '@shinbashi/torus'
+import trezorModule from '@shinbashi/trezor'
+import walletConnectModule from '@shinbashi/walletconnect'
+import coinbaseModule from '@shinbashi/coinbase'
+import magicModule from '@shinbashi/magic'
+import web3authModule from '@shinbashi/web3auth'
+import dcentModule from '@shinbashi/dcent'
+import sequenceModule from '@shinbashi/sequence'
+import tahoModule from '@shinbashi/taho'
+import trustModule from '@shinbashi/trust'
+import frontierModule from '@shinbashi/frontier'
 
 const INFURA_KEY = ''
 

@@ -14,14 +14,14 @@ Note: Make sure to install the core module before installing other modules to w3
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/injected-wallets
+yarn add @shinbashi/injected-wallets
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/injected-wallets
+npm install @shinbashi/injected-wallets
 ```
 
   </TabPanel>
@@ -32,8 +32,8 @@ npm install @web3-onboard/injected-wallets
 To allow all injected wallets that are supported, don't pass in any options:
 
 ```javascript
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
 
 const MAINNET_RPC_URL = 'https://mainnet.infura.io/v3/<INFURA_KEY>'
 
@@ -72,8 +72,8 @@ console.log(connectedWallets)
 Injected wallets that you do not want to support can be filtered based on the `Platform` the user is on. For example you may not want to support the 'Detected Wallet' that is detected automatically and filter it via all platforms by passing `false`:
 
 ```javascript
-import Onboard from '@web3-onboard/core'
-import injectedModule, { ProviderLabel } from '@web3-onboard/injected-wallets'
+import Onboard from '@shinbashi/core'
+import injectedModule, { ProviderLabel } from '@shinbashi/injected-wallets'
 
 const MAINNET_RPC_URL = 'https://mainnet.infura.io/v3/<INFURA_KEY>'
 
@@ -92,8 +92,8 @@ const onboard = Onboard({
 Or you may want to only filter the 'Detected Wallet' on a select few platforms:
 
 ```javascript
-import Onboard from '@web3-onboard/core'
-import injectedModule, { ProviderLabel } from '@web3-onboard/injected-wallets'
+import Onboard from '@shinbashi/core'
+import injectedModule, { ProviderLabel } from '@shinbashi/injected-wallets'
 
 const MAINNET_RPC_URL = 'https://mainnet.infura.io/v3/<INFURA_KEY>'
 

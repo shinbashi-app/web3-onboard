@@ -20,14 +20,14 @@ Supports both Eth Mainnet and Polygon gas pricing.
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/gas
+yarn add @shinbashi/gas
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/gas
+npm install @shinbashi/gas
 ```
 
   </TabPanel>
@@ -36,7 +36,7 @@ npm install @web3-onboard/gas
 ### Standalone Setup
 
 ```typescript
-import gas from '@web3-onboard/gas'
+import gas from '@shinbashi/gas'
 
 // subscribe to a single chain for estimates using the default poll rate of 5 secs
 // API key is optional and if provided allows for faster poll rates
@@ -86,7 +86,7 @@ This example assumes you have already setup web3-onboard to connect wallets to y
 For more information see [web3-onboard docs](/docs/modules/core#install).
 
 ```ts copy
-import gas from '@web3-onboard/gas'
+import gas from '@shinbashi/gas'
 import { ethers } from 'ethers'
 
 // Set provider using the Web3-Onboard wallet.provider instance from the connected wallet

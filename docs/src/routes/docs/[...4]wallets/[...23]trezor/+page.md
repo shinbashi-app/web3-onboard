@@ -12,14 +12,14 @@ Wallet module for connecting Trezor hardware wallets to web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/trezor
+yarn add @shinbashi/trezor
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/trezor
+npm install @shinbashi/trezor
 ```
 
   </TabPanel>
@@ -74,8 +74,8 @@ type Platform = DeviceOSName | DeviceBrowserName | DeviceType | 'all'
 ### Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import trezorModule from '@web3-onboard/trezor'
+import Onboard from '@shinbashi/core'
+import trezorModule from '@shinbashi/trezor'
 
 const trezor = trezorModule({
   email: '<EMAIL_CONTACT>',

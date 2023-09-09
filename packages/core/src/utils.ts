@@ -10,7 +10,7 @@ import type {
   WalletInit,
   WalletModule,
   ChainWithDecimalId
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 import {
   hourglass,

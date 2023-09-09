@@ -16,9 +16,9 @@ const config: UserConfig = {
   plugins: [
     sveltekit(),
     development &&
-      nodePolyfills({
-        include: ['node_modules/**/*.js', new RegExp('node_modules/.vite/.*js'), 'http', 'crypto']
-      })
+    nodePolyfills({
+      include: ['node_modules/**/*.js', new RegExp('node_modules/.vite/.*js'), 'http', 'crypto']
+    })
   ],
   resolve: {
     alias: {
@@ -29,7 +29,7 @@ const config: UserConfig = {
   },
   build: {
     rollupOptions: {
-      external: ['@web3-onboard/*'],
+      external: ['@shinbashi/*'],
       plugins: [nodePolyfills({ include: ['crypto', 'http'] }), inject({ Buffer: ['Buffer', 'Buffer'] })]
     },
     commonjsOptions: {
@@ -39,7 +39,7 @@ const config: UserConfig = {
   optimizeDeps: {
     exclude: ['@ethersproject/hash', 'wrtc', 'http'],
     include: [
-      '@web3-onboard/core',
+      '@shinbashi/core',
       'js-sha3',
       '@ethersproject/bignumber'
     ],

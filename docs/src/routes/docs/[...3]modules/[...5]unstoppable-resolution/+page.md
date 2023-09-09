@@ -12,14 +12,14 @@ A module to add Unstoppable Domain resolution to web3-onboard.
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/unstoppable-resolution
+yarn add @shinbashi/unstoppable-resolution
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/unstoppable-resolution
+npm install @shinbashi/unstoppable-resolution
 ```
 
   </TabPanel>
@@ -28,8 +28,8 @@ npm install @web3-onboard/unstoppable-resolution
 ### Standalone Setup
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import unstoppableResolution from '@web3-onboard/unstoppable-resolution'
+import Onboard from '@shinbashi/core'
+import unstoppableResolution from '@shinbashi/unstoppable-resolution'
 
 const onboard = Onboard({
   // ... other Onboard options

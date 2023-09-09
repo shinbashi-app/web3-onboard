@@ -17,14 +17,14 @@ Dapp devs will need to handle accordingly through the exposed API and can expect
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/cede-store
+yarn add @shinbashi/cede-store
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/cede-store
+npm install @shinbashi/cede-store
 ```
 
   </TabPanel>
@@ -33,8 +33,8 @@ npm install @web3-onboard/cede-store
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import cedeStoreWalletModule from '@web3-onboard/cede-store'
+import Onboard from '@shinbashi/core'
+import cedeStoreWalletModule from '@shinbashi/cede-store'
 const cedeStoreWallet = cedeStoreWalletModule()
 const onboard = Onboard({
   // ... other Onboard options

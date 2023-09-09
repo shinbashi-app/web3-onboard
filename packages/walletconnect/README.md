@@ -1,10 +1,10 @@
-# @web3-onboard/walletconnect
+# @shinbashi/walletconnect
 
 ## Wallet module for connecting Wallet Connect to web3-onboard
 
 ### Install
 
-`npm i @web3-onboard/core @web3-onboard/walletconnect`
+`npm i @shinbashi/core @shinbashi/walletconnect`
 
 ## Version 1 of WalletConnect has been deprecated
 
@@ -85,8 +85,8 @@ type WalletConnectOptions = {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import walletConnectModule from '@web3-onboard/walletconnect'
+import Onboard from '@shinbashi/core'
+import walletConnectModule from '@shinbashi/walletconnect'
 
 const wcV2InitOptions = {
   /**

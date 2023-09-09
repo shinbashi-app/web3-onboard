@@ -1,4 +1,4 @@
-# @web3-onboard/zeal
+# @shinbashi/zeal
 
 ## Wallet module for connecting Zeal to web3-onboard
 
@@ -8,13 +8,13 @@ For any questions or issues related to integration with Zeal wallet do not hesit
 
 ### Install
 
-`npm i @web3-onboard/core @web3-onboard/zeal`
+`npm i @shinbashi/core @shinbashi/zeal`
 
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import zealWalletModule from '@web3-onboard/zeal'
+import Onboard from '@shinbashi/core'
+import zealWalletModule from '@shinbashi/zeal'
 
 // initialize the module with options
 const zealWalletSdk = zealWalletModule()

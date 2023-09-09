@@ -6,7 +6,7 @@ import {
   ProviderAccounts,
   ChainId,
   AccountAddress
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 import type { EthereumProvider } from '@ledgerhq/connect-kit-loader'
 import type { StaticJsonRpcProvider as StaticJsonRpcProviderType } from '@ethersproject/providers'
 import WalletConnect from '@walletconnect/client'
@@ -42,7 +42,7 @@ function ledger(options: LedgerOptionsWCv1 = { walletConnectVersion: 1 }): Walle
         // return the Ledger Extension provider
         if (
           checkSupportResult.providerImplementation ===
-            SupportedProviderImplementations.LedgerConnect
+          SupportedProviderImplementations.LedgerConnect
         ) {
           return {
             provider: instance
@@ -54,7 +54,7 @@ function ledger(options: LedgerOptionsWCv1 = { walletConnectVersion: 1 }): Walle
           '@ethersproject/providers'
         )
         const { ProviderRpcError, ProviderRpcErrorCode } = await import(
-          '@web3-onboard/common'
+          '@shinbashi/common'
         )
         const { default: WalletConnect } = await import('@walletconnect/client')
         const { Subject, fromEvent } = await import('rxjs')

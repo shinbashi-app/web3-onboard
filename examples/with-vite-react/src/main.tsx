@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Web3OnboardProvider } from '@web3-onboard/react'
+import { Web3OnboardProvider } from '@shinbashi/react'
 import web3Onboard from './web3-onboard'
 import App from './App'
 import './index.css'

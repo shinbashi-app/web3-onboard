@@ -14,14 +14,14 @@ Install the core Onboard library and the injected wallets module to support brow
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/injected-wallets
+yarn add @shinbashi/core @shinbashi/injected-wallets
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/injected-wallets
+npm install @shinbashi/core @shinbashi/injected-wallets
 ```
 
   </TabPanel>
@@ -30,8 +30,8 @@ npm install @web3-onboard/core @web3-onboard/injected-wallets
 ### Import
 
 ```js
-import Onboard, { chains } from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
+import Onboard, { chains } from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
 ```
 
 ### Configure
@@ -39,8 +39,8 @@ import injectedModule from '@web3-onboard/injected-wallets'
 #### Wallets
 
 ```ts {4-6}
-import Onboard, { chains } from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
+import Onboard, { chains } from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
 
 const injected = injectedModule()
 

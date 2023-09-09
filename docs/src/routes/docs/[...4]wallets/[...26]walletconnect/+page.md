@@ -16,19 +16,18 @@ _Version 1 of WalletConnect has been deprecated by the WC team and the WC bridge
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/walletconnect
+yarn add @shinbashi/walletconnect
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/walletconnect
+npm install @shinbashi/walletconnect
 ```
 
   </TabPanel>
 </Tabs>
-
 
 ```typescript
 type WalletConnectOptions = {
@@ -103,8 +102,8 @@ type WalletConnectOptions = {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import walletConnectModule from '@web3-onboard/walletconnect'
+import Onboard from '@shinbashi/core'
+import walletConnectModule from '@shinbashi/walletconnect'
 
 const wcV2InitOptions = {
   /**

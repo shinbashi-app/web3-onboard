@@ -12,14 +12,14 @@ Wallet module for connecting Ledger hardware wallets to web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/ledger
+yarn add @shinbashi/core @shinbashi/ledger
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/ledger
+npm install @shinbashi/core @shinbashi/ledger
 ```
 
   </TabPanel>
@@ -71,8 +71,8 @@ type LedgerOptions = LedgerOptionsWCv1 | LedgerOptionsWCv2
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import ledgerModule from '@web3-onboard/ledger'
+import Onboard from '@shinbashi/core'
+import ledgerModule from '@shinbashi/ledger'
 
 const ledger = ledgerModule({
   /**

@@ -1,4 +1,4 @@
-import { WalletInit } from '@web3-onboard/common'
+import { WalletInit } from '@shinbashi/common'
 
 async function getProvider() {
   const injected = (window as any).ethereum

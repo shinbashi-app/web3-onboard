@@ -10,7 +10,7 @@ title: Uniswap Widget Example
 
 # {$frontmatter.title}
 
-This example will walk you through how to integrate `@web3-onboard` with the [Uniswap Widget](https://docs.uniswap.org/sdk/widgets/swap-widget)! Add this web3-onboard enabled uniswap widget to your site to provide users with token swap capabilities quickly.
+This example will walk you through how to integrate `@shinbashi` with the [Uniswap Widget](https://docs.uniswap.org/sdk/widgets/swap-widget)! Add this web3-onboard enabled uniswap widget to your site to provide users with token swap capabilities quickly.
 
 ## Step 1: Install
 
@@ -20,14 +20,14 @@ To start, we'll install the widgets library and the web3-onboard react library u
   <TabPanel value="yarn">
     
 ```bash copy
-yarn add @web3-onboard/react @web3-onboard/injected-wallets
+yarn add @shinbashi/react @shinbashi/injected-wallets
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```bash copy
-npm install @web3-onboard/react @web3-onboard/injected-wallets
+npm install @shinbashi/react @shinbashi/injected-wallets
 ```
 
   </TabPanel>
@@ -40,8 +40,8 @@ Import the libraries and any wallets you would like to use. For this example, we
 We'll create a file called `web3-onboard.ts` and then export the initialized `web3-onboard` instance and use this throughout our dapp.
 
 ```ts title="web3-onboard.ts"|copy
-import { init } from '@web3-onboard/react'
-import injectedModule from '@web3-onboard/injected-wallets'
+import { init } from '@shinbashi/react'
+import injectedModule from '@shinbashi/injected-wallets'
 
 const INFURA_KEY = ''
 
@@ -89,7 +89,7 @@ In our main `App` component we'll setup our Web3-Onboard react hooks. For this e
 import { useState, useEffect } from 'react'
 
 import { ethers } from 'ethers'
-import { useConnectWallet } from '@web3-onboard/react'
+import { useConnectWallet } from '@shinbashi/react'
 
 export default function App() {
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet()
@@ -139,7 +139,7 @@ We will take the `connectWallet` function that we previously defined and pass it
 import { useState, useEffect } from 'react'
 
 import { ethers } from 'ethers'
-import { useConnectWallet } from '@web3-onboard/react'
+import { useConnectWallet } from '@shinbashi/react'
 
 import { SwapWidget } from '@uniswap/widgets'
 import '@uniswap/widgets/fonts.css'
@@ -207,7 +207,7 @@ Finally, we'll wrap our main App component with the `web3-onboard` context provi
 ```js title="index.tsx"|copy|{8-9,13-15}
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Web3OnboardProvider } from '@web3-onboard/react'
+import { Web3OnboardProvider } from '@shinbashi/react'
 
 import './index.css'
 import App from './App.tsx'

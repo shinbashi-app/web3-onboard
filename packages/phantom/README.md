@@ -1,4 +1,4 @@
-# @web3-onboard/phantom
+# @shinbashi/phantom
 
 ## Wallet module for connecting Phantom to Web3-Onboard
 
@@ -6,13 +6,13 @@
 
 ### Install
 
-`npm i @web3-onboard/core @web3-onboard/phantom`
+`npm i @shinbashi/core @shinbashi/phantom`
 
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import phantomModule from '@web3-onboard/phantom'
+import Onboard from '@shinbashi/core'
+import phantomModule from '@shinbashi/phantom'
 
 // initialize the module
 const phantom = phantomModule()

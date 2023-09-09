@@ -27,9 +27,9 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
-    "@web3-onboard/coinbase": "^2.2.2",
-    "@web3-onboard/core": "^2.21.0",
-    "@web3-onboard/injected-wallets": "^2.8.4",
-    "@web3-onboard/walletconnect": "^2.3.5"
+    "@shinbashi/coinbase": "^2.2.2",
+    "@shinbashi/core": "^2.21.0",
+    "@shinbashi/injected-wallets": "^2.8.4",
+    "@shinbashi/walletconnect": "^2.3.5"
   }
 }

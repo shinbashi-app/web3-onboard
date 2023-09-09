@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import { useConnectWallet } from '@web3-onboard/react'
+import { useConnectWallet } from '@shinbashi/react'
 import { ethers } from 'ethers'
 
 const buttonStyles = {
@@ -27,7 +27,7 @@ export default function Home() {
   if (wallet) {
     ethersProvider = new ethers.providers.Web3Provider(wallet.provider, 'any')
   }
-  
+
   return (
     <div className={styles.container}>
       <Head>

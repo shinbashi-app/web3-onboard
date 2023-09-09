@@ -5,7 +5,7 @@ title: Walletlink
 # {$frontmatter.title}
 
 :::admonition type=warning
-_Wallet module for connecting WalletLink to web3-onboard is now deprecated. Please use [@web3-onboard/coinbase](../../wallets/coinbase.md)_
+_Wallet module for connecting WalletLink to web3-onboard is now deprecated. Please use [@shinbashi/coinbase](../../wallets/coinbase.md)_
 :::
 
 ### Install
@@ -14,14 +14,14 @@ _Wallet module for connecting WalletLink to web3-onboard is now deprecated. Plea
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/walletlink
+yarn add @shinbashi/walletlink
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/walletlink
+npm install @shinbashi/walletlink
 ```
 
   </TabPanel>
@@ -38,8 +38,8 @@ type WalletLinkOptions = {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import walletLinkModule from '@web3-onboard/walletlink'
+import Onboard from '@shinbashi/core'
+import walletLinkModule from '@shinbashi/walletlink'
 
 // initialize the module with options
 const walletLink = walletLinkModule({ darkMode: true })

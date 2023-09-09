@@ -13,14 +13,14 @@
   <TabPanel value="npm">
 
 ```sh copy
-npm i @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-preview
+npm i @shinbashi/core @shinbashi/injected @shinbashi/transaction-preview
 ```
 
   </TabPanel>
   <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-preview
+yarn add @shinbashi/core @shinbashi/injected @shinbashi/transaction-preview
 ```
 
   </TabPanel>
@@ -32,14 +32,14 @@ yarn add @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-pre
   <TabPanel value="npm">
 
 ```sh copy
-npm i @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-preview
+npm i @shinbashi/core @shinbashi/injected @shinbashi/transaction-preview
 ```
 
   </TabPanel>
   <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-preview
+yarn add @shinbashi/core @shinbashi/injected @shinbashi/transaction-preview
 ```
 
   </TabPanel>
@@ -48,14 +48,14 @@ yarn add @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-pre
   <TabPanel value="npm">
 
 ```sh copy
-npm i @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-preview
+npm i @shinbashi/core @shinbashi/injected @shinbashi/transaction-preview
 ```
 
   </TabPanel>
   <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-preview
+yarn add @shinbashi/core @shinbashi/injected @shinbashi/transaction-preview
 ```
 
   </TabPanel>
@@ -93,7 +93,7 @@ yarn add @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-pre
 Install the core Onboard library and the injected wallets module to support browser extension and mobile wallets:
 
 ```bash copy
-npm i @web3-onboard/core @web3-onboard/injected-wallets
+npm i @shinbashi/core @shinbashi/injected-wallets
 ```
 
 ## Quick Start
@@ -101,8 +101,8 @@ npm i @web3-onboard/core @web3-onboard/injected-wallets
 Then initialize in your app:
 
 ```js copy lineNumbers
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
 import { ethers } from 'ethers'
 
 const MAINNET_RPC_URL = 'https://mainnet.infura.io/v3/<INFURA_KEY>'

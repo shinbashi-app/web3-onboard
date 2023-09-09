@@ -5,7 +5,7 @@ import {
   ProviderAccounts,
   Platform,
   Device
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 /**
  * The `ProviderIdentityFlag` is a property on an injected provider

@@ -11,7 +11,7 @@ import {
   chainValidation,
   validate,
   AppMetadata
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 import type {
   InitOptions,
@@ -230,7 +230,6 @@ const theme = Joi.alternatives().try(themeMap, presetTheme)
 
 const initOptions = Joi.object({
   wallets: walletInit,
-  chains: chains.required(),
   appMetadata: appMetadata,
   i18n: Joi.object().unknown(),
   apiKey: Joi.string(),

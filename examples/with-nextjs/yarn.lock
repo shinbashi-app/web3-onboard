@@ -912,22 +912,22 @@
     crypto-js "^4.1.1"
     elliptic "^6.5.4"
 
-"@web3-onboard/common@^2.2.4-alpha.1", "@web3-onboard/common@^2.3.1":
+"@shinbashi/common@^2.2.4-alpha.1", "@shinbashi/common@^2.3.1":
   version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/common/-/common-2.3.1.tgz#69ad0d5167e5103086c34a4f7e8af90681d71be4"
+  resolved "https://registry.yarnpkg.com/@shinbashi/common/-/common-2.3.1.tgz#69ad0d5167e5103086c34a4f7e8af90681d71be4"
   integrity sha512-VRIsJLW92Q+bu6w9WSlTrPIk0vGmFvVwnoAKy1ubKuBvSKKhMUmrnv8N5tusr0mk+gcUuUdDF6gLDCABqrfC7g==
   dependencies:
     bignumber.js "^9.1.0"
     ethers "5.5.4"
     joi "17.9.1"
 
-"@web3-onboard/core@^2.15.6-alpha.3":
+"@shinbashi/core@^2.15.6-alpha.3":
   version "2.16.2"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/core/-/core-2.16.2.tgz#49b46d539e54d170e445065ff4017d8a53c90835"
+  resolved "https://registry.yarnpkg.com/@shinbashi/core/-/core-2.16.2.tgz#49b46d539e54d170e445065ff4017d8a53c90835"
   integrity sha512-ONIMVt35i2kEJclCa9L8Gf2q71nIogtyyvXZTQuxZXvlN1DSECTXir6xuzb9iezd8QuxWBdtZcWzLZnf5KimkQ==
   dependencies:
     "@unstoppabledomains/resolution" "^8.0"
-    "@web3-onboard/common" "^2.3.1"
+    "@shinbashi/common" "^2.3.1"
     bignumber.js "^9.0.0"
     bnc-sdk "^4.6.7"
     bowser "^2.11.0"
@@ -941,13 +941,13 @@
     svelte "^3.49.0"
     svelte-i18n "^3.3.13"
 
-"@web3-onboard/react@2.6.7-alpha.3":
+"@shinbashi/react@2.6.7-alpha.3":
   version "2.6.7-alpha.3"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/react/-/react-2.6.7-alpha.3.tgz#211c77b352211769422858ff97dce109a9f447d8"
+  resolved "https://registry.yarnpkg.com/@shinbashi/react/-/react-2.6.7-alpha.3.tgz#211c77b352211769422858ff97dce109a9f447d8"
   integrity sha512-jYkF4ZKgRduB0rDhCbW8RQYEaWs5kowTCEPa66GFGEg3i5zo0hyevitzPy6XgqKtcNcEk5m1UjfDQkCqBCE/Ig==
   dependencies:
-    "@web3-onboard/common" "^2.2.4-alpha.1"
-    "@web3-onboard/core" "^2.15.6-alpha.3"
+    "@shinbashi/common" "^2.2.4-alpha.1"
+    "@shinbashi/core" "^2.15.6-alpha.3"
     use-sync-external-store "1.0.0"
 
 acorn-jsx@^5.3.2:

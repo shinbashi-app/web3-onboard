@@ -22,17 +22,17 @@
 </template>
 
 <script>
-import { init, useOnboard } from '@web3-onboard/vue';
-import injectedModule from '@web3-onboard/injected-wallets';
+import { init, useOnboard } from '@shinbashi/vue'
+import injectedModule from '@shinbashi/injected-wallets'
 
-const injected = injectedModule();
+const injected = injectedModule()
 // With vite
-const infuraKey = import.meta.env.VITE_INFURA_KEY;
+const infuraKey = import.meta.env.VITE_INFURA_KEY
 
 // Without vite
 //const infuraKey = process.env.INFURA_KEY;
 
-const rpcUrl = `https://mainnet.infura.io/v3/${infuraKey}`;
+const rpcUrl = `https://mainnet.infura.io/v3/${infuraKey}`
 
 const web3Onboard = init({
   wallets: [injected],
@@ -41,7 +41,7 @@ const web3Onboard = init({
       id: '0x1',
       token: 'ETH',
       label: 'Ethereum Mainnet',
-      rpcUrl,
+      rpcUrl
     },
     {
       id: '0x2105',
@@ -49,28 +49,28 @@ const web3Onboard = init({
       label: 'Base',
       rpcUrl: 'https://mainnet.base.org'
     }
-  ],
-});
+  ]
+})
 
 const { wallets, connectWallet, disconnectConnectedWallet, connectedWallet } =
-  useOnboard();
+  useOnboard()
 
-const trunc = (address) =>
-  !!address ? address.slice(0, 6) + '...' + address.slice(-6) : null;
+const trunc = address =>
+  !!address ? address.slice(0, 6) + '...' + address.slice(-6) : null
 
 export default {
   props: {
-    msg: String,
+    msg: String
   },
   data() {
     return {
       connectedWallet,
-      count: 0,
-    };
+      count: 0
+    }
   },
   methods: {
     connect: () => connectWallet(),
-    disconnect: () => disconnectConnectedWallet(),
+    disconnect: () => disconnectConnectedWallet()
   },
   computed: {
     address: function () {
@@ -78,8 +78,8 @@ export default {
         this.connectedWallet.accounts &&
         this.connectedWallet.accounts[0].address
       ) {
-        console.log(this.connectedWallet.accounts[0].address);
-        return trunc(this.connectedWallet.accounts[0].address);
+        console.log(this.connectedWallet.accounts[0].address)
+        return trunc(this.connectedWallet.accounts[0].address)
       }
     },
     ens: function () {
@@ -87,7 +87,7 @@ export default {
         this.connectedWallet.accounts &&
         this.connectedWallet.accounts[0].ens?.name
       ) {
-        return trunc(this.connectedWallet.accounts[0].ens);
+        return trunc(this.connectedWallet.accounts[0].ens)
       }
     },
     uns: function () {
@@ -95,11 +95,11 @@ export default {
         this.connectedWallet.accounts &&
         this.connectedWallet.accounts[0].uns?.name
       ) {
-        return trunc(this.connectedWallet.accounts[0].uns);
+        return trunc(this.connectedWallet.accounts[0].uns)
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped>

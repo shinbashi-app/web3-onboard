@@ -1,10 +1,10 @@
-# @web3-onboard/gnosis
+# @shinbashi/gnosis
 
 ## Wallet module for connecting Safe to web3-onboard
 
 ### Install
 
-`npm i @web3-onboard/gnosis @safe-global/safe-apps-provider @safe-global/safe-apps-sdk`
+`npm i @shinbashi/gnosis @safe-global/safe-apps-provider @safe-global/safe-apps-sdk`
 
 ### Options
 
@@ -17,8 +17,8 @@ type GnosisOptions = {
 ### Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import safeModule from '@web3-onboard/gnosis'
+import Onboard from '@shinbashi/core'
+import safeModule from '@shinbashi/gnosis'
 
 const safe = safeModule()
 
@@ -46,14 +46,14 @@ An example of accessing the Safe SDK instance and sending a transaction can be f
 const tx = {
   to: toAddress,
   value: 1000000000000000,
-  data: '0x',
+  data: '0x'
 }
 const params = {
-  safeTxGas: 5000000,
-};
+  safeTxGas: 5000000
+}
 
 // wallet is the provider exposed by web3-onboard after the Safe wallet is connected
-let trans = await wallet.instance.txs.send({txs:[tx], params})
+let trans = await wallet.instance.txs.send({ txs: [tx], params })
 ```
 
 Note: With the `safeTxGas` you will see additional value on the `gasLimit` displayed in the Safe. Check [Safe docs](https://github.com/safe-global/safe-contracts/blob/a6504a9afdeac186a8cdb29ad68b189523c80eda/docs/safe_tx_gas.md) for full details on that computation.

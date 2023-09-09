@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Web3Onboard from '@web3-onboard/core'
-import type { InitOptions, OnboardAPI } from '@web3-onboard/core'
+import Web3Onboard from '@shinbashi/core'
+import type { InitOptions, OnboardAPI } from '@shinbashi/core'
 
 const HOOK_ERROR_MESSAGE =
   'Must call the provided initialization method`init` method before using hooks.'
@@ -14,7 +14,8 @@ export const init = (options: InitOptions): OnboardAPI => {
   return web3OnboardGlobal
 }
 
-export const Context: React.Context<OnboardAPI | undefined> = React.createContext<OnboardAPI | undefined>(undefined)
+export const Context: React.Context<OnboardAPI | undefined> =
+  React.createContext<OnboardAPI | undefined>(undefined)
 
 export type Web3OnboardProviderProps = {
   web3Onboard: OnboardAPI

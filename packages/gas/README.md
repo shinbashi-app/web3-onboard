@@ -1,4 +1,4 @@
-# @web3-onboard/gas
+# @shinbashi/gas
 
 ## A module for requesting streams or single requests of gas price estimates from the [Blocknative Gas Platform API](https://onboard.blocknative.com/docs/packages/gas).
 
@@ -7,15 +7,15 @@ Supports both Eth Mainnet and Polygon gas pricing.
 ### Install
 
 **NPM**
-`npm i @web3-onboard/gas`
+`npm i @shinbashi/gas`
 
 **Yarn**
-`yarn add @web3-onboard/gas`
+`yarn add @shinbashi/gas`
 
 ### Standalone Setup
 
 ```typescript
-import gas from '@web3-onboard/gas'
+import gas from '@shinbashi/gas'
 
 // subscribe to a single chain for estimates using the default poll rate of 5 secs
 // API key is optional and if provided allows for faster poll rates
@@ -59,13 +59,13 @@ const gasBlockPrices = await gas.get({
 })
 ```
 
-
 ## Usage with Web3-Onboard wallet Connect and Ethers.js
 
-This example assumes you have already setup web3-onboard to connect wallets to your dapp. 
+This example assumes you have already setup web3-onboard to connect wallets to your dapp.
 For more information see [web3-onboard docs](https://onboard.blocknative.com/docs/modules/core#install).
+
 ```ts
-import gas from '@web3-onboard/gas'
+import gas from '@shinbashi/gas'
 import { ethers } from 'ethers'
 
 // Set provider using the Web3-Onboard wallet.provider instance from the connected wallet
@@ -73,7 +73,7 @@ let provider = new ethers.providers.Web3Provider(wallet.provider, 'any')
 let bnGasPrices
 
 const ethMainnetGasBlockPrices = gas.stream({
-  chains: ['0x1'], // '0x89' can also be added/replaced here for Polygon gas data 
+  chains: ['0x1'], // '0x89' can also be added/replaced here for Polygon gas data
   apiKey: '<OPTIONAL_API_KEY>', // for faster refresh rates
   endpoint: 'blockPrices'
 })
@@ -95,7 +95,7 @@ const sendTransaction = async () => {
   }
 
   const signer = provider.getUncheckedSigner()
-  
+
   // define desired confidence for transaction inclusion in block and set in transaction
   // block inclusion confidence options: 70, 80, 90, 95, 99
   const bnGasForTransaction = bnGasPrices.find(gas => gas.confidence === 90)

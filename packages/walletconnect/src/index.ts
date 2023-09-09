@@ -1,4 +1,4 @@
-import type { WalletInit } from '@web3-onboard/common'
+import type { WalletInit } from '@shinbashi/common'
 import { EthereumProviderOptions } from '@walletconnect/ethereum-provider/dist/types/EthereumProvider'
 import v1 from './v1.js'
 import v2 from './v2.js'
@@ -10,7 +10,7 @@ export type WalletConnectOptions = {
    */
   handleUri?: (uri: string) => Promise<unknown>
 } & (
-  | {
+    | {
       /**
        * @deprecated
        * Version 1 of WalletConnect has been deprecated by the WC team and the WC bridge is not available.
@@ -30,7 +30,7 @@ export type WalletConnectOptions = {
         mobileLinks: string[]
       }
     }
-  | {
+    | {
       /**
        * Project ID associated with [WalletConnect account](https://cloud.walletconnect.com)
        */
@@ -70,7 +70,7 @@ export type WalletConnectOptions = {
        */
       additionalOptionalMethods?: string[] | undefined
     }
-)
+  )
 
 export const isHexString = (value: string | number) => {
   if (typeof value !== 'string' || !value.match(/^0x[0-9A-Fa-f]*$/)) {

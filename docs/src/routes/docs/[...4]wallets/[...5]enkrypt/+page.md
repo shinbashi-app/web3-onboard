@@ -12,14 +12,14 @@ Wallet module for connecting Enkrypt wallet through web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/enkrypt
+yarn add @shinbashi/enkrypt
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/enkrypt
+npm install @shinbashi/enkrypt
 ```
 
   </TabPanel>
@@ -28,8 +28,8 @@ npm install @web3-onboard/enkrypt
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import enrkypt from '@web3-onboard/enkrypt'
+import Onboard from '@shinbashi/core'
+import enrkypt from '@shinbashi/enkrypt'
 
 const enrkyptModule = enrkypt()
 

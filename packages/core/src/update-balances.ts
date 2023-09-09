@@ -2,7 +2,7 @@ import { state } from './store/index.js'
 import { getBalance } from './provider.js'
 import { updateAllWallets } from './store/actions.js'
 import { ethers } from 'ethers'
-import { AccountAddress, Chain, weiToEth } from '@web3-onboard/common'
+import { AccountAddress, Chain, weiToEth } from '@shinbashi/common'
 import type { SecondaryTokenBalances, WalletState } from './types'
 
 async function updateBalances(addresses?: string[]): Promise<void> {

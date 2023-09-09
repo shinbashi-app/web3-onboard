@@ -10,9 +10,9 @@ import type {
   ProviderAccounts,
   WalletInit,
   EIP1193Provider
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 import { validateUauthInitOptions } from './validation.js'
-import { createEIP1193Provider } from '@web3-onboard/common'
+import { createEIP1193Provider } from '@shinbashi/common'
 
 const isHexString = (value: string | number) => {
   if (typeof value !== 'string' || !value.match(/^0x[0-9A-Fa-f]*$/)) {
@@ -76,7 +76,7 @@ function uauth(options: UauthInitOptions): WalletInit {
             // NOTE: We don't want to throw because the page will take some time to
             // load the redirect page.
             // eslint-disable-next-line @typescript-eslint/no-empty-function
-            await new Promise<void>(() => {})
+            await new Promise<void>(() => { })
             // We need to throw here otherwise typescript won't know that user isn't null.
             throw new Error('Should never get here.')
           } else {
@@ -108,7 +108,7 @@ function uauth(options: UauthInitOptions): WalletInit {
             'eth_signTypedData_v4'
           ]
           const { ProviderRpcError, ProviderRpcErrorCode } = await import(
-            '@web3-onboard/common'
+            '@shinbashi/common'
           )
 
           const { default: EthereumProvider } = await import(
@@ -142,21 +142,21 @@ function uauth(options: UauthInitOptions): WalletInit {
           // default to mainnet
           const requiredChainsParsed: number[] =
             Array.isArray(requiredChains) &&
-            requiredChains.length &&
-            requiredChains.every(num => !isNaN(num))
+              requiredChains.length &&
+              requiredChains.every(num => !isNaN(num))
               ? // @ts-ignore
-                // Required as WC package does not support hex numbers
-                requiredChains.map(chainID => parseInt(chainID))
+              // Required as WC package does not support hex numbers
+              requiredChains.map(chainID => parseInt(chainID))
               : [1]
 
           // Defaults to the chains provided within the web3-onboard init chain property
           const optionalChainsParsed: number[] =
             Array.isArray(optionalChains) &&
-            optionalChains.length &&
-            optionalChains.every(num => !isNaN(num))
+              optionalChains.length &&
+              optionalChains.every(num => !isNaN(num))
               ? // @ts-ignore
-                // Required as WC package does not support hex numbers
-                optionalChains.map(chainID => parseInt(chainID))
+              // Required as WC package does not support hex numbers
+              optionalChains.map(chainID => parseInt(chainID))
               : chains.map(({ id }) => parseInt(id, 16))
 
           console.log(
@@ -166,7 +166,7 @@ function uauth(options: UauthInitOptions): WalletInit {
 
           const optionalMethods =
             additionalOptionalMethods &&
-            Array.isArray(additionalOptionalMethods)
+              Array.isArray(additionalOptionalMethods)
               ? [...additionalOptionalMethods, ...methods]
               : methods
 

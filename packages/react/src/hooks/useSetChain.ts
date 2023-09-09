@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 
-import type { ConnectedChain } from '@web3-onboard/core'
-import type { Chain } from '@web3-onboard/common'
+import type { ConnectedChain } from '@shinbashi/core'
+import type { Chain } from '@shinbashi/common'
 import { useAppState } from './useAppState.js'
 import { useWeb3Onboard } from '../context.js'
 
@@ -13,13 +13,13 @@ type SetChainOptions = {
 export const useSetChain = (
   walletLabel?: string
 ): [
-  {
-    chains: Chain[]
-    connectedChain: ConnectedChain | null
-    settingChain: boolean
-  },
-  (options: SetChainOptions) => Promise<boolean>
-] => {
+    {
+      chains: Chain[]
+      connectedChain: ConnectedChain | null
+      settingChain: boolean
+    },
+    (options: SetChainOptions) => Promise<boolean>
+  ] => {
   const web3Onboard = useWeb3Onboard()
 
   const { setChain } = web3Onboard

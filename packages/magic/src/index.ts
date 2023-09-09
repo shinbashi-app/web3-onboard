@@ -1,4 +1,4 @@
-import type { WalletInit, EIP1193Provider } from '@web3-onboard/common'
+import type { WalletInit, EIP1193Provider } from '@shinbashi/common'
 import type { MagicInitOptions } from './types.js'
 import { validateMagicInitOptions } from './validation.js'
 
@@ -26,7 +26,7 @@ function magic(options: MagicInitOptions): WalletInit {
           createEIP1193Provider,
           ProviderRpcErrorCode,
           ProviderRpcError
-        } = await import('@web3-onboard/common')
+        } = await import('@shinbashi/common')
 
         const emitter = new EventEmitter()
 
@@ -155,7 +155,7 @@ function magic(options: MagicInitOptions): WalletInit {
                   ...transactionObject,
                   nonce:
                     transactionObject.hasOwnProperty('nonce') &&
-                    typeof transactionObject.nonce === 'number'
+                      typeof transactionObject.nonce === 'number'
                       ? parseInt(transactionObject.nonce)
                       : '',
                   from: activeAddress,

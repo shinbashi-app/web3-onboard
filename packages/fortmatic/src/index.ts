@@ -1,4 +1,4 @@
-import type { WalletInit, APIKey, EIP1193Provider } from '@web3-onboard/common'
+import type { WalletInit, APIKey, EIP1193Provider } from '@shinbashi/common'
 
 function fortmatic(options: APIKey): WalletInit {
   const { apiKey } = options
@@ -13,7 +13,7 @@ function fortmatic(options: APIKey): WalletInit {
           createEIP1193Provider,
           ProviderRpcErrorCode,
           ProviderRpcError
-        } = await import('@web3-onboard/common')
+        } = await import('@shinbashi/common')
 
         const emitter = new EventEmitter()
 
@@ -48,8 +48,8 @@ function fortmatic(options: APIKey): WalletInit {
               const [balance] = await instance.user.getBalances()
               return balance
                 ? BigNumber.from(balance.crypto_amount)
-                    .mul('1000000000000000000')
-                    .toString()
+                  .mul('1000000000000000000')
+                  .toString()
                 : '0'
             },
             wallet_switchEthereumChain: async ({ params }) => {

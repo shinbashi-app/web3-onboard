@@ -14,14 +14,14 @@ A collection of React hooks for implementing web3-onboard into a React project
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/react @web3-onboard/injected-wallets
+yarn add @shinbashi/react @shinbashi/injected-wallets
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/react @web3-onboard/injected-wallets
+npm install @shinbashi/react @shinbashi/injected-wallets
 ```
 
   </TabPanel>
@@ -31,8 +31,8 @@ npm install @web3-onboard/react @web3-onboard/injected-wallets
 
 ```javascript title="App.js"
 import React from 'react'
-import { init, useConnectWallet } from '@web3-onboard/react'
-import injectedModule from '@web3-onboard/injected-wallets'
+import { init, useConnectWallet } from '@shinbashi/react'
+import injectedModule from '@shinbashi/injected-wallets'
 import { ethers } from 'ethers'
 
 // Sign up to get your free API key at https://explorer.blocknative.com/?signup=true
@@ -94,8 +94,8 @@ You can use the context provider `Web3OnboardProvider` to better manage global s
 the initialized web3Onboard instance will be available in all children components. See example below.
 
 ```ts
-import { Web3OnboardProvider, init } from '@web3-onboard/react'
-import injectedModule from '@web3-onboard/injected-wallets'
+import { Web3OnboardProvider, init } from '@shinbashi/react'
+import injectedModule from '@shinbashi/injected-wallets'
 const INFURA_KEY = ''
 const ethereumRopsten = {
   id: '0x3',
@@ -126,14 +126,14 @@ export default MyApp
 
 ## `init`
 
-The `init` function must be called before any hooks can be used. The `init` function just initializes `web3-onboard` and makes it available for all hooks to use. For reference check out the [initialization docs for `@web3-onboard/core`](../../modules/core.md#initialization)
+The `init` function must be called before any hooks can be used. The `init` function just initializes `web3-onboard` and makes it available for all hooks to use. For reference check out the [initialization docs for `@shinbashi/core`](../../modules/core.md#initialization)
 
 ## `useConnectWallet`
 
 This hook allows you to connect the user's wallet and track the state of the connection status and the wallet that is connected.
 
 ```ts
-import { useConnectWallet } from '@web3-onboard/react'
+import { useConnectWallet } from '@shinbashi/react'
 
 type UseConnectWallet = (): [
   { wallet: WalletState | null; connecting: boolean },
@@ -195,7 +195,7 @@ setPrimaryWallet(wallets[1], wallets[1].accounts[2].address)
 This hook allows you to set the chain of a user's connected wallet, keep track of the current chain the user is connected to and the status of setting the chain. Passing in a wallet label will operate on that connected wallet, otherwise it will default to the last connected wallet. If a chain was instantiated without an rpcUrl, token, or label, add these options for wallets that require this information for adding a new chain.
 
 ```typescript
-import { useSetChain } from '@web3-onboard/react'
+import { useSetChain } from '@shinbashi/react'
 
 type UseSetChain = (
   walletLabel?: string
@@ -234,7 +234,7 @@ const [
 
 This hook allows the dev to access all notifications if enabled, send custom notifications and update notify <enable/disable & update transactionHandler function>
 **note** requires an API key be added to the initialization, enabled by default if API key exists
-For full Notification documentation please see [Notify section within the `@web3-onboard/core` docs](../../modules/core.md#initialization)
+For full Notification documentation please see [Notify section within the `@shinbashi/core` docs](../../modules/core.md#initialization)
 
 ```typescript
 type UseNotifications = (): [
@@ -315,7 +315,7 @@ type TxDetails = {
 ```
 
 ```typescript
-import { useNotifications } from '@web3-onboard/react'
+import { useNotifications } from '@shinbashi/react'
 
 const [
   notifications, // the list of all notifications that update when notifications are added, updated or removed
@@ -402,7 +402,7 @@ const sendTransactionWithPreFlightNotifications = async () => {
 This hook allows you to track the state of all the currently connected wallets.
 
 ```typescript
-import { useWallets } from '@web3-onboard/react'
+import { useWallets } from '@shinbashi/react'
 
 type UseWallets = (): WalletState[]
 
@@ -414,7 +414,7 @@ const connectedWallets = useWallets()
 This hook allows you to track and update the state of the AccountCenter
 
 ```typescript
-import { useAccountCenter } from '@web3-onboard/react'
+import { useAccountCenter } from '@shinbashi/react'
 
 type UseAccountCenter = (): ((
   update: AccountCenter | Partial<AccountCenter>
@@ -441,7 +441,7 @@ const updateAccountCenter = useAccountCenter()
 This hook allows you to set the locale of your application to allow language updates associated with the i18n config
 
 ```typescript
-import { useSetLocale } from '@web3-onboard/react'
+import { useSetLocale } from '@shinbashi/react'
 
 type useSetLocale = (): ((locale: string) => void)
 

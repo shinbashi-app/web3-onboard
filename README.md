@@ -17,16 +17,16 @@
 Install the core Onboard library, the injected wallets module and optionally ethers js to support browser extension and mobile wallets:
 
 **NPM**
-`npm i @web3-onboard/core @web3-onboard/injected-wallets ethers`
+`npm i @shinbashi/core @shinbashi/injected-wallets ethers`
 
 **Yarn**
-`yarn add @web3-onboard/core @web3-onboard/injected-wallets ethers`
+`yarn add @shinbashi/core @shinbashi/injected-wallets ethers`
 
 Then initialize in your app:
 
 ```javascript
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
 import { ethers } from 'ethers'
 
 const MAINNET_RPC_URL = 'https://mainnet.infura.io/v3/<INFURA_KEY>'

@@ -12,14 +12,14 @@ Wallet module for connecting Web3auth to web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/web3auth
+yarn add @shinbashi/web3auth
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/web3auth
+npm install @shinbashi/web3auth
 ```
 
   </TabPanel>
@@ -33,8 +33,8 @@ For troubleshooting web3Auth errors, framework, polyfill, etc please see the [of
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import web3authModule from '@web3-onboard/web3auth'
+import Onboard from '@shinbashi/core'
+import web3authModule from '@shinbashi/web3auth'
 
 const web3auth = web3authModule({
   clientId:

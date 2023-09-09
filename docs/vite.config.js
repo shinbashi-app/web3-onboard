@@ -17,7 +17,7 @@ const config = {
   },
   build: {
     rollupOptions: {
-      external: ['@web3-onboard/*'],
+      external: ['@shinbashi/*'],
       plugins: [nodePolyfills({ crypto: true, http: true })]
     },
     commonjsOptions: {
@@ -30,12 +30,12 @@ const config = {
   optimizeDeps: {
     exclude: ['@ethersproject/hash', 'wrtc', 'http', 'react/jsx-runtime'],
     include: [
-      '@web3-onboard/core',
-      '@web3-onboard/gas',
-      '@web3-onboard/ledger',
-      '@web3-onboard/uauth',
-      '@web3-onboard/walletconnect',
-      '@web3-onboard/sequence',
+      '@shinbashi/core',
+      '@shinbashi/gas',
+      '@shinbashi/ledger',
+      '@shinbashi/uauth',
+      '@shinbashi/walletconnect',
+      '@shinbashi/sequence',
       'js-sha3',
       '@ethersproject/bignumber'
     ]

@@ -12,14 +12,14 @@ Wallet module for connecting Mew wallet through web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/mew-wallet
+yarn add @shinbashi/mew-wallet
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/mew-wallet
+npm install @shinbashi/mew-wallet
 ```
 
   </TabPanel>
@@ -28,8 +28,8 @@ npm install @web3-onboard/mew-wallet
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import mewWallet from '@web3-onboard/mew-wallet'
+import Onboard from '@shinbashi/core'
+import mewWallet from '@shinbashi/mew-wallet'
 
 const mewWalletModule = mewWallet()
 

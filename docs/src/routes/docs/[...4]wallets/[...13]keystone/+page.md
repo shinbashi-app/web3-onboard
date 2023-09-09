@@ -12,14 +12,14 @@ Wallet module for connecting Keystone hardware wallets to web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/keystone
+yarn add @shinbashi/keystone
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/keystone
+npm install @shinbashi/keystone
 ```
 
   </TabPanel>
@@ -70,8 +70,8 @@ interface BootstrapNode {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import keystoneModule from '@web3-onboard/keystone'
+import Onboard from '@shinbashi/core'
+import keystoneModule from '@shinbashi/keystone'
 
 const keystone = keystoneModule()
 

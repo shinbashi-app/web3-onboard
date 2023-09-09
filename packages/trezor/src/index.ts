@@ -1,4 +1,4 @@
-import { Account, Asset, ScanAccountsOptions } from '@web3-onboard/hw-common'
+import { Account, Asset, ScanAccountsOptions } from '@shinbashi/hw-common'
 import type { StaticJsonRpcProvider } from '@ethersproject/providers'
 import type { TransactionRequest } from '@ethersproject/providers'
 import type {
@@ -17,7 +17,7 @@ import type {
   Platform,
   TransactionObject,
   WalletInit
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 interface TrezorOptions {
   email: string
@@ -159,16 +159,16 @@ function trezor(options: TrezorOptions): WalletInit {
         )
 
         const { createEIP1193Provider, ProviderRpcError } = await import(
-          '@web3-onboard/common'
+          '@shinbashi/common'
         )
 
-        const { accountSelect } = await import('@web3-onboard/hw-common')
+        const { accountSelect } = await import('@shinbashi/hw-common')
 
         const {
           getCommon,
           bigNumberFieldsToStrings,
           getHardwareWalletProvider
-        } = await import('@web3-onboard/hw-common')
+        } = await import('@shinbashi/hw-common')
 
         const ethUtil = await import('ethereumjs-util')
         const { compress } = (await import('eth-crypto')).publicKey
@@ -485,7 +485,7 @@ function trezor(options: TrezorOptions): WalletInit {
                 reject(
                   new Error(
                     (response.payload && response.payload.error) ||
-                      'There was an error signing a message'
+                    'There was an error signing a message'
                   )
                 )
               }
@@ -522,8 +522,8 @@ function trezor(options: TrezorOptions): WalletInit {
           },
           eth_accounts: async () =>
             Array.isArray(accounts) &&
-            accounts.length &&
-            accounts[0].hasOwnProperty('address')
+              accounts.length &&
+              accounts[0].hasOwnProperty('address')
               ? [accounts[0].address]
               : [],
           eth_chainId: async () =>

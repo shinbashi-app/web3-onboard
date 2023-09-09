@@ -2,8 +2,8 @@ import type {
   WalletInit,
   SimpleEventEmitter,
   EIP1193Provider
-} from '@web3-onboard/common'
-import { createEIP1193Provider } from '@web3-onboard/common'
+} from '@shinbashi/common'
+import { createEIP1193Provider } from '@shinbashi/common'
 import { CustomWindow } from './types.js'
 declare const window: CustomWindow
 
@@ -28,7 +28,7 @@ function enkrypt(): WalletInit {
 
           const provider = createEIP1193Provider(enkryptProvider)
 
-          provider.removeListener = (event, func) => {}
+          provider.removeListener = (event, func) => { }
 
           return {
             provider

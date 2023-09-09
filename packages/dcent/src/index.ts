@@ -3,13 +3,13 @@ import type {
   WalletInit,
   EIP1193Provider,
   Platform
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 import type {
   CustomNetwork,
   Account,
   ScanAccountsOptions
-} from '@web3-onboard/hw-common'
+} from '@shinbashi/hw-common'
 import { StaticJsonRpcProvider } from '@ethersproject/providers'
 
 interface CustomWindow extends Window {
@@ -87,7 +87,7 @@ function dcent({
           if (isMobile && !provider) {
             location.replace(
               'https://link.dcentwallet.com/DAppBrowser/?url=' +
-                document.location
+              document.location
             )
           }
           provider.on = eventEmitter.on.bind(eventEmitter)
@@ -108,14 +108,14 @@ function dcent({
         )
 
         const { getCommon, accountSelect } = await import(
-          '@web3-onboard/hw-common'
+          '@shinbashi/hw-common'
         )
 
         const {
           createEIP1193Provider,
           ProviderRpcErrorCode,
           ProviderRpcError
-        } = await import('@web3-onboard/common')
+        } = await import('@shinbashi/common')
 
         let currentChain: Chain = chains[0]
         const scanAccounts = async ({

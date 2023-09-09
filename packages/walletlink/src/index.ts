@@ -1,4 +1,4 @@
-import { WalletInit } from '@web3-onboard/common'
+import { WalletInit } from '@shinbashi/common'
 
 function walletLink(options?: { darkMode?: boolean }): WalletInit {
   const { darkMode = false } = options || {}
@@ -52,6 +52,6 @@ function walletLink(options?: { darkMode?: boolean }): WalletInit {
 }
 
 /**
- * @deprecated Use @web3-onboard/coinbase
+ * @deprecated Use @shinbashi/coinbase
  */
 export default walletLink

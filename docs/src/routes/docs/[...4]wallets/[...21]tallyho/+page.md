@@ -5,7 +5,7 @@ title: Tally Ho
 # {$frontmatter.title}
 
 :::admonition type=warning
-_Wallet module for connecting TallyHo to web3-onboard is now deprecated. Please use [@web3-onboard/taho](../../wallets/taho.md)_
+_Wallet module for connecting TallyHo to web3-onboard is now deprecated. Please use [@shinbashi/taho](../../wallets/taho.md)_
 :::
 
 ## Wallet module for connecting TallyHo
@@ -18,14 +18,14 @@ See [Taho Developer Docs](https://docs.tally.cash/tally/developers/integrating-d
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/tallyho
+yarn add @shinbashi/core @shinbashi/tallyho
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/tallyho
+npm install @shinbashi/core @shinbashi/tallyho
 ```
 
   </TabPanel>
@@ -34,8 +34,8 @@ npm install @web3-onboard/core @web3-onboard/tallyho
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import tallyWalletModule from '@web3-onboard/tallyho'
+import Onboard from '@shinbashi/core'
+import tallyWalletModule from '@shinbashi/tallyho'
 
 const onboard = Onboard({
   // ... other Onboard options

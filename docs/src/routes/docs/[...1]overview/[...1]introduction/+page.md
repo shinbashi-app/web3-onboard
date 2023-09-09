@@ -73,26 +73,26 @@ Install the core Onboard library, the injected wallets module and optionally eth
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/injected-wallets ethers
+yarn add @shinbashi/core @shinbashi/injected-wallets ethers
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm i @web3-onboard/core @web3-onboard/injected-wallets ethers
+npm i @shinbashi/core @shinbashi/injected-wallets ethers
 ```
 
   </TabPanel>
 </Tabs>
 
-You can find a link to web3-onboard's official NPM Documentation here: [@web3-onboard/core Official NPM Documentation](https://www.npmjs.com/package/@web3-onboard/core)
+You can find a link to web3-onboard's official NPM Documentation here: [@shinbashi/core Official NPM Documentation](https://www.npmjs.com/package/@shinbashi/core)
 
 Then initialize in your app:
 
 ```ts copy
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
 import { ethers } from 'ethers'
 
 const MAINNET_RPC_URL = 'https://mainnet.infura.io/v3/<INFURA_KEY>'

@@ -12,14 +12,14 @@ Wallet module for connecting Coinbase Wallet SDK to web3-onboard. Check out the 
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/coinbase
+yarn add @shinbashi/coinbase
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/coinbase
+npm install @shinbashi/coinbase
 ```
 
   </TabPanel>
@@ -36,8 +36,8 @@ type CoinbaseWalletOptions = {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import coinbaseWalletModule from '@web3-onboard/coinbase'
+import Onboard from '@shinbashi/core'
+import coinbaseWalletModule from '@shinbashi/coinbase'
 
 // initialize the module with options
 const coinbaseWalletSdk = coinbaseWalletModule({ darkMode: true })

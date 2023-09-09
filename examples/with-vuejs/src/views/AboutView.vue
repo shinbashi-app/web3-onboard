@@ -1,7 +1,7 @@
 <script setup>
-import { useOnboard } from '@web3-onboard/vue';
+import { useOnboard } from '@shinbashi/vue'
 
-const { connectedWallet } = useOnboard();
+const { connectedWallet } = useOnboard()
 </script>
 <template>
   <div class="about">

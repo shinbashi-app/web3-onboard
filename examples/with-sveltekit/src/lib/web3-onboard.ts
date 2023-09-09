@@ -1,7 +1,7 @@
-import Onboard from '@web3-onboard/core'
-import type { OnboardAPI } from '@web3-onboard/core'
-import injectedWalletsModule from '@web3-onboard/injected-wallets'
-import walletConnectModule from '@web3-onboard/walletconnect'
+import Onboard from '@shinbashi/core'
+import type { OnboardAPI } from '@shinbashi/core'
+import injectedWalletsModule from '@shinbashi/injected-wallets'
+import walletConnectModule from '@shinbashi/walletconnect'
 
 const injected = injectedWalletsModule()
 const walletConnect = walletConnectModule({

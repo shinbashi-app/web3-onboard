@@ -5,7 +5,7 @@ import type {
   DeviceBrowser,
   DeviceOS,
   DeviceType
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 /**
  * Takes in TransactionRequest and converts all Hex values to numbers
@@ -20,19 +20,19 @@ export const hexFieldsToNumber = (
       ...transaction,
       ...(typeof transaction[txnProperty as keyof TransactionForSim] ===
         'string' &&
-      (transaction[txnProperty as keyof TransactionForSim] as string).includes(
-        '0x'
-      ) &&
-      txnProperty !== 'to' &&
-      txnProperty !== 'input' &&
-      txnProperty !== 'data' &&
-      txnProperty !== 'from'
+        (transaction[txnProperty as keyof TransactionForSim] as string).includes(
+          '0x'
+        ) &&
+        txnProperty !== 'to' &&
+        txnProperty !== 'input' &&
+        txnProperty !== 'data' &&
+        txnProperty !== 'from'
         ? {
-            [txnProperty]: parseInt(
-              transaction[txnProperty as keyof TransactionForSim] as string,
-              16
-            )
-          }
+          [txnProperty]: parseInt(
+            transaction[txnProperty as keyof TransactionForSim] as string,
+            16
+          )
+        }
         : {})
     }),
     transaction

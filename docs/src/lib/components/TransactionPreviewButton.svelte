@@ -85,7 +85,7 @@
 
   onMount(async () => {
     const { default: Blocknative } = await import('bnc-sdk')
-    const { default: transactionPreviewModule } = await import('@web3-onboard/transaction-preview')
+    const { default: transactionPreviewModule } = await import('@shinbashi/transaction-preview')
 
     blocknativeSdk = new Blocknative({
       dappId: '133a026b-c7a0-419c-a00b-66255b3cd487',

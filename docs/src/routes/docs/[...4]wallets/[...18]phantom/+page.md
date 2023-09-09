@@ -16,14 +16,14 @@ The module for connecting Phantom to web3-onboard is still in alpha testing and 
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/phantom
+yarn add @shinbashi/core @shinbashi/phantom
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/phantom
+npm install @shinbashi/core @shinbashi/phantom
 ```
 
   </TabPanel>
@@ -32,8 +32,8 @@ npm install @web3-onboard/core @web3-onboard/phantom
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import phantomModule from '@web3-onboard/phantom'
+import Onboard from '@shinbashi/core'
+import phantomModule from '@shinbashi/phantom'
 
 // initialize the module
 const phantom = phantomModule()

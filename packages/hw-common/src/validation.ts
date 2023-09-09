@@ -5,7 +5,7 @@ import {
   validate,
   chainValidation,
   type ValidateReturn
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 const basePath = Joi.object({
   label: Joi.string().required(),

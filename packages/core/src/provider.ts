@@ -2,7 +2,7 @@ import { fromEventPattern, Observable } from 'rxjs'
 import { filter, takeUntil, take, share, switchMap } from 'rxjs/operators'
 import partition from 'lodash.partition'
 import { providers, utils } from 'ethers'
-import { weiToEth } from '@web3-onboard/common'
+import { weiToEth } from '@shinbashi/common'
 import { disconnectWallet$ } from './streams.js'
 import { updateAccount, updateWallet } from './store/actions.js'
 import { validEnsChain } from './utils.js'
@@ -20,7 +20,7 @@ import type {
   AccountsListener,
   ChainListener,
   SelectAccountsRequest
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 import type {
   Account,
@@ -31,7 +31,7 @@ import type {
   WalletState
 } from './types.js'
 
-import type { Uns } from '@web3-onboard/unstoppable-resolution'
+import type { Uns } from '@shinbashi/unstoppable-resolution'
 import { updateSecondaryTokens } from './update-balances'
 
 export const ethersProviders: {
@@ -215,8 +215,8 @@ export function trackWallet(
           account && account.ens
             ? Promise.resolve(account.ens)
             : validEnsChain(connectedWalletChain.id)
-            ? getEns(address, chain)
-            : Promise.resolve(null)
+              ? getEns(address, chain)
+              : Promise.resolve(null)
 
         const unsProm =
           account && account.uns
@@ -285,12 +285,12 @@ export function trackWallet(
 
     const resetAccounts = accounts.map(
       ({ address }) =>
-        ({
-          address,
-          ens: null,
-          uns: null,
-          balance: null
-        } as Account)
+      ({
+        address,
+        ens: null,
+        uns: null,
+        balance: null
+      } as Account)
     )
 
     updateWallet(label, {

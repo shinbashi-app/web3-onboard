@@ -1520,21 +1520,21 @@
     "@walletconnect/window-getters" "^1.0.1"
     tslib "1.14.1"
 
-"@web3-onboard/common@^2.3.3":
+"@shinbashi/common@^2.3.3":
   version "2.3.3"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/common/-/common-2.3.3.tgz#02096e967dbed272c0637cda955902b96a0fce06"
+  resolved "https://registry.yarnpkg.com/@shinbashi/common/-/common-2.3.3.tgz#02096e967dbed272c0637cda955902b96a0fce06"
   integrity sha512-Ytppszqe77VY8WglRdr/Lfx+HmcZ2hXQEkBA23JaVYmzKvP/mC6j+sjGUD8CgXDpRRxyKoiRj6nz95GRABie6Q==
   dependencies:
     bignumber.js "^9.1.0"
     ethers "5.5.4"
     joi "17.9.1"
 
-"@web3-onboard/core@^2.20.4":
+"@shinbashi/core@^2.20.4":
   version "2.20.4"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/core/-/core-2.20.4.tgz#ccc9ff509e56720e526b4ceae5459a1f2a435d22"
+  resolved "https://registry.yarnpkg.com/@shinbashi/core/-/core-2.20.4.tgz#ccc9ff509e56720e526b4ceae5459a1f2a435d22"
   integrity sha512-IFI3DVq5QgFj5w1TyL61gHmeOlkX8AJiBAARO3cd4zW8I3h9K2+7HeE7LbsfwefZYLILzXCfF0gMB3qRN/GWYQ==
   dependencies:
-    "@web3-onboard/common" "^2.3.3"
+    "@shinbashi/common" "^2.3.3"
     bignumber.js "^9.0.0"
     bnc-sdk "^4.6.7"
     bowser "^2.11.0"
@@ -1548,9 +1548,9 @@
     svelte "^3.49.0"
     svelte-i18n "^3.3.13"
 
-"@web3-onboard/ledger@^2.4.3-alpha.1":
+"@shinbashi/ledger@^2.4.3-alpha.1":
   version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/ledger/-/ledger-2.5.1.tgz#c686998efd1305d02c658ee44063de97af7b4690"
+  resolved "https://registry.yarnpkg.com/@shinbashi/ledger/-/ledger-2.5.1.tgz#c686998efd1305d02c658ee44063de97af7b4690"
   integrity sha512-7NAOKUz2z/TkyeWF8Wq+sKhRUfHhglzoc6RtzCCooU0xxRl4xfpah5zh0vr1b56tQ/hfBWXlLaaZtdY+cXfC/A==
   dependencies:
     "@ethersproject/providers" "5.5.0"
@@ -1558,16 +1558,16 @@
     "@walletconnect/client" "^1.8.0"
     "@walletconnect/ethereum-provider" "2.9.0"
     "@walletconnect/modal" "2.5.9"
-    "@web3-onboard/common" "^2.3.3"
+    "@shinbashi/common" "^2.3.3"
     rxjs "^7.5.2"
 
-"@web3-onboard/react@^2.6.7-alpha.3":
+"@shinbashi/react@^2.6.7-alpha.3":
   version "2.8.9"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/react/-/react-2.8.9.tgz#e64b5067d490b22d3a4566fb7c8d71d7b1787703"
+  resolved "https://registry.yarnpkg.com/@shinbashi/react/-/react-2.8.9.tgz#e64b5067d490b22d3a4566fb7c8d71d7b1787703"
   integrity sha512-Ih2PJhyTEpiW9wQbli+ZYqU8qkWqgR3PYmT2teHdDiaDaF8nPBvztBPPZkLjZSyx67iLsOBqS4kw8n74BK7DQw==
   dependencies:
-    "@web3-onboard/common" "^2.3.3"
-    "@web3-onboard/core" "^2.20.4"
+    "@shinbashi/common" "^2.3.3"
+    "@shinbashi/core" "^2.20.4"
     use-sync-external-store "1.0.0"
 
 acorn-jsx@^5.3.2:

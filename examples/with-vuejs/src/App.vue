@@ -1,8 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { init } from '@web3-onboard/vue'
-import injectedModule from '@web3-onboard/injected-wallets'
+import { init } from '@shinbashi/vue'
+import injectedModule from '@shinbashi/injected-wallets'
 
 const injected = injectedModule()
 const infuraKey = '<INFURA_KEY>'

@@ -41,7 +41,7 @@ export default {
     })
   ],
   external: [
-    '@web3-onboard/common',
+    '@shinbashi/common',
     'ethers',
     'bowser',
     'joi',

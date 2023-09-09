@@ -14,14 +14,14 @@ See [XDEFI Wallet Developer Docs](https://sdk.xdefi.io/)
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/xdefi
+yarn add @shinbashi/core @shinbashi/xdefi
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/xdefi
+npm install @shinbashi/core @shinbashi/xdefi
 ```
 
   </TabPanel>
@@ -30,8 +30,8 @@ npm install @web3-onboard/core @web3-onboard/xdefi
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import xdefiWalletModule from '@web3-onboard/xdefi'
+import Onboard from '@shinbashi/core'
+import xdefiWalletModule from '@shinbashi/xdefi'
 
 // initialize the module with options
 const xdefiWalletSdk = xdefiWalletModule()

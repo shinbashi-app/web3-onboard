@@ -1,4 +1,4 @@
-import type { WalletState } from '@web3-onboard/core'
+import type { WalletState } from '@shinbashi/core'
 
 import { useAppState } from './useAppState.js'
 

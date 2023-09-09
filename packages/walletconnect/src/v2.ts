@@ -8,7 +8,7 @@ import type {
   ProviderAccounts,
   WalletInit,
   EIP1193Provider
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 import type { WalletConnectOptions } from './index.js'
 import type { JQueryStyleEventEmitter } from 'rxjs/internal/observable/fromEvent'
 import { isHexString } from './index.js'
@@ -48,7 +48,7 @@ function walletConnect(options: WalletConnectOptions): WalletInit {
       getIcon: async () => (await import('./icon.js')).default,
       getInterface: async ({ chains, EventEmitter, appMetadata }) => {
         const { ProviderRpcError, ProviderRpcErrorCode } = await import(
-          '@web3-onboard/common'
+          '@shinbashi/common'
         )
 
         const { default: EthereumProvider } = await import(
@@ -89,21 +89,21 @@ function walletConnect(options: WalletConnectOptions): WalletInit {
         // default to mainnet
         const requiredChainsParsed: number[] =
           Array.isArray(requiredChains) &&
-          requiredChains.length &&
-          requiredChains.every(num => !isNaN(num))
+            requiredChains.length &&
+            requiredChains.every(num => !isNaN(num))
             ? // @ts-ignore
-              // Required as WC package does not support hex numbers
-              requiredChains.map(chainID => parseInt(chainID))
+            // Required as WC package does not support hex numbers
+            requiredChains.map(chainID => parseInt(chainID))
             : []
 
         // Defaults to the chains provided within the web3-onboard init chain property
         const optionalChainsParsed: number[] =
           Array.isArray(optionalChains) &&
-          optionalChains.length &&
-          optionalChains.every(num => !isNaN(num))
+            optionalChains.length &&
+            optionalChains.every(num => !isNaN(num))
             ? // @ts-ignore
-              // Required as WC package does not support hex numbers
-              optionalChains.map(chainID => parseInt(chainID))
+            // Required as WC package does not support hex numbers
+            optionalChains.map(chainID => parseInt(chainID))
             : chains.map(({ id }) => parseInt(id, 16))
 
         const requiredMethodsSet = new Set(

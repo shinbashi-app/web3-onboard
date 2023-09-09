@@ -14,7 +14,7 @@ With Web3-Onboard, we’ve introduced significant architectural changes that pro
 
 If you have bnc-onboard installed, you will need to install web3-onboard instead. The basic steps you need to take to get started are:
 
-1. Install `npm i @web3-onboard/core`. You can then go ahead and install other specific wallet modules you want (most likely `npm i @web3-onboard/injected-wallets` for browser wallet support).
+1. Install `npm i @shinbashi/core`. You can then go ahead and install other specific wallet modules you want (most likely `npm i @shinbashi/injected-wallets` for browser wallet support).
 2. Initialize Onboard with the wallets you’ve installed along with the networks you would like to support.
 3. Make use of our API actions like `await onboard.connectWallet()` to allow a user to connect their wallets.
 
@@ -25,7 +25,7 @@ To help you get started quickly we’ve put together [a set of examples across m
 
 This is the biggest change you might experience as an onboard.js user. With Web3-Onboard, we’ve separated all supported wallets into their modules, meaning you only need to integrate specific wallet modules you intend to support in your app.
 For example with Onboard, if you wanted to support only Metamask and Coinbase in your app, you had to install Onboard complete with all other wallets: `npm install bnc-onboard`.
-With Web3-Onboard, you only need to install core along with the desired wallet modules: `npm i @web3-onboard/core @web3-onboard/injected-wallets @web3-onboard/coinbase`
+With Web3-Onboard, you only need to install core along with the desired wallet modules: `npm i @shinbashi/core @shinbashi/injected-wallets @shinbashi/coinbase`
 This change allows us to support many web3 wallets without affecting the overall library performance.
 
 ### Expansive Initialization Options
@@ -62,9 +62,9 @@ Learn more about state changes tracked with the Onboard API [here](/docs/modules
 
 Although Onboard is still framework-agnostic, we’ve introduced a couple of framework-specific modules that are frequently asked for by our users.
 
-`@web3-onboard/react` - React Hooks to connect users to web3 dApps better. You can check out [a comprehensive React Hooks guide](https://www.blocknative.com/blog/react-hooks-ethereum) we've written on it.
+`@shinbashi/react` - React Hooks to connect users to web3 dApps better. You can check out [a comprehensive React Hooks guide](https://www.blocknative.com/blog/react-hooks-ethereum) we've written on it.
 
-`@web3-onboard/vue` - A set of reusable functions for integrating Web3-Onboard into a Vue 3 project. This is also compatible with a Vue 2 + composition-api dApp.
+`@shinbashi/vue` - A set of reusable functions for integrating Web3-Onboard into a Vue 3 project. This is also compatible with a Vue 2 + composition-api dApp.
 
 ### CSS Customizations
 

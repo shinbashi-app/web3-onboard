@@ -22,15 +22,6 @@ async function connect(
     }
   }
 
-  const { chains } = state.get()
-
-  // Wallets require the chains for initializing providers,
-  // so we must ensure at least one is set
-  if (!chains.length)
-    throw new Error(
-      'At least one chain must be set before attempting to connect a wallet'
-    )
-
   const { autoSelect } = options || {
     autoSelect: { label: '', disableModals: false }
   }

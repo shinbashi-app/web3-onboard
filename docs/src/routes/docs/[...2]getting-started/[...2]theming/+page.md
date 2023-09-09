@@ -8,7 +8,7 @@ To customize the color theme of web3-onboard and match it with your dapp, you ca
 
 ## Available Themes
 
-To set the color theme of web3-onboard to one of the available native themes, import Onboard from `@web3-onboard/core` and pass the theme as a string to the `theme` init option.
+To set the color theme of web3-onboard to one of the available native themes, import Onboard from `@shinbashi/core` and pass the theme as a string to the `theme` init option.
 
 | theme     | description                                                                       |
 | --------- | --------------------------------------------------------------------------------- |
@@ -20,7 +20,7 @@ To set the color theme of web3-onboard to one of the available native themes, im
 Example:
 
 ```typescript
-import Onboard from '@web3-onboard/core'
+import Onboard from '@shinbashi/core'
 
 const onboard = Onboard({
   theme: 'dark'
@@ -50,7 +50,7 @@ In the table below, you'll find a list of css variables that you can use to them
 To create a custom theme, you can define a `ThemingMap` object with CSS variables for different components of web3-onboard. Pass this object as the theme option.
 
 ```typescript copy
-import Onboard, { ThemingMap } from '@web3-onboard/core'
+import Onboard, { ThemingMap } from '@shinbashi/core'
 
 const customTheme: ThemingMap = {
   '--w3o-background-color': '#f0f0f0',
@@ -72,14 +72,14 @@ const onboard = Onboard({
 ## Dynamically Update Theme with API
 
 **`updateTheme`** is an exposed API method for actively updating the theme of web3-onboard. The function accepts `Theme` types (see below).
-_If using the `@web3-onboard/react` package there is a hook exposed called `updateTheme`_
+_If using the `@shinbashi/react` package there is a hook exposed called `updateTheme`_
 
 The function also accepts a custom built `ThemingMap` object that contains all or some of the theming variables
 
 Example:
 
 ```typescript copy
-import Onboard from '@web3-onboard/core'
+import Onboard from '@shinbashi/core'
 
 const onboard = Onboard({
   theme: 'dark'

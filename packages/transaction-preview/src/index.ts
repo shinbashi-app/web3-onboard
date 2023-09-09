@@ -2,7 +2,7 @@ import { firstValueFrom, Subject } from 'rxjs'
 import {
   ProviderRpcError,
   ProviderRpcErrorCode
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 import type {
   PatchedEIP1193Provider,
   TransactionPreviewInitOptions,
@@ -12,7 +12,7 @@ import type {
   TransactionForSim,
   FullPreviewOptions
 } from './types.js'
-import type { EIP1193Provider } from '@web3-onboard/common'
+import type { EIP1193Provider } from '@shinbashi/common'
 import type {
   InternalTransaction,
   MultiSimOutput,
@@ -143,10 +143,10 @@ const handlePreview = async (
     options.requireTransactionApproval
       ? handleRequireApproval(app, fullProviderRequest, req)
       : fullProviderRequest(req)
-          .then(() => {
-            app.$destroy()
-          })
-          .catch(() => app.$destroy())
+        .then(() => {
+          app.$destroy()
+        })
+        .catch(() => app.$destroy())
   } catch (e) {
     fullProviderRequest(req)
     if (app) app.$destroy()
@@ -252,7 +252,7 @@ const fontFamilyExternallyDefined = (): boolean => {
 }
 
 const importFontsToDoc = async (): Promise<void> => {
-  const { InterVar } = await import('@web3-onboard/common')
+  const { InterVar } = await import('@shinbashi/common')
   // Add Fonts to main page
   const styleEl = document.createElement('style')
 

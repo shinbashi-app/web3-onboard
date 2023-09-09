@@ -1,6 +1,6 @@
 import '../styles/globals.css'
-import { Web3OnboardProvider, init } from '@web3-onboard/react'
-import injectedModule from '@web3-onboard/injected-wallets'
+import { Web3OnboardProvider, init } from '@shinbashi/react'
+import injectedModule from '@shinbashi/injected-wallets'
 
 const INFURA_KEY = ''
 
@@ -31,9 +31,9 @@ const web3Onboard = init({
   wallets,
   chains,
   appMetadata: {
-    name: "Web3-Onboard Demo",
+    name: 'Web3-Onboard Demo',
     icon: '<svg>My App Icon</svg>',
-    description: "A demo of Web3-Onboard."
+    description: 'A demo of Web3-Onboard.'
   }
 })
 

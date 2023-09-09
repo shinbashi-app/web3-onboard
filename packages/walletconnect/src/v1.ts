@@ -6,7 +6,7 @@ import type {
   EIP1193Provider,
   ChainId,
   AccountAddress
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 import type { WalletConnectOptions } from './index.js'
 import { isHexString } from './index.js'
 
@@ -35,7 +35,7 @@ function walletConnect(options: WalletConnectOptions): WalletInit {
         )
 
         const { ProviderRpcError, ProviderRpcErrorCode } = await import(
-          '@web3-onboard/common'
+          '@shinbashi/common'
         )
 
         const { default: WalletConnect } = await import('@walletconnect/client')
@@ -153,9 +153,9 @@ function walletConnect(options: WalletConnectOptions): WalletInit {
                 // @ts-ignore
                 return isHexString(this.connector.chainId)
                   ? // @ts-ignore
-                    this.connector.chainId
+                  this.connector.chainId
                   : // @ts-ignore
-                    `0x${this.connector.chainId.toString(16)}`
+                  `0x${this.connector.chainId.toString(16)}`
               }
 
               if (method === 'eth_requestAccounts') {

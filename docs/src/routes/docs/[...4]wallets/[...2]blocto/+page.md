@@ -12,14 +12,14 @@ Wallet module for connecting Blocto SDK to web3-onboard. Check out the [Blocto D
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/blocto
+yarn add @shinbashi/blocto
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/blocto
+npm install @shinbashi/blocto
 ```
 
   </TabPanel>
@@ -28,8 +28,8 @@ npm install @web3-onboard/blocto
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import bloctoModule from '@web3-onboard/blocto'
+import Onboard from '@shinbashi/core'
+import bloctoModule from '@shinbashi/blocto'
 
 // initialize the module with options
 const blocto = bloctoModule()

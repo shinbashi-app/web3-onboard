@@ -1,7 +1,7 @@
 <script lang="ts">
   import anime from 'animejs'
   import GasCard from './GasCard.svelte'
-  import gasModule from '@web3-onboard/gas'
+  import gasModule from '@shinbashi/gas'
   import { onDestroy, onMount } from 'svelte'
   import { ethers } from 'ethers'
   import type { GasPrice, RPCGasPrice, GasData } from './types'

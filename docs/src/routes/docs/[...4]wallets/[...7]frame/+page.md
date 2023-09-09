@@ -9,20 +9,20 @@ title: Frame
 ### Install
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/frame
+yarn add @shinbashi/core @shinbashi/frame
 ```
 
 or
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/frame
+npm install @shinbashi/core @shinbashi/frame
 ```
 
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import frameModule from '@web3-onboard/frame'
+import Onboard from '@shinbashi/core'
+import frameModule from '@shinbashi/frame'
 // initialize the module
 const frame = frameModule()
 const onboard = Onboard({
@@ -41,8 +41,8 @@ console.log(connectedWallets)
 You may decide that on certain platforms you do not want to display this wallet as a selectable option. To do that you can use the `filter` init option which is an array of platforms that you would like this wallet to **not** be displayed to the end user:
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import frameModule from '@web3-onboard/frame'
+import Onboard from '@shinbashi/core'
+import frameModule from '@shinbashi/frame'
 const frame = frameModule({ filter: ['iOS', 'Android'] })
 const onboard = Onboard({
   // ... other Onboard options

@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 import web3Onboard from './web3-onboard'
-import { useConnectWallet } from '@web3-onboard/react'
+import { useConnectWallet } from '@shinbashi/react'
 
 function App() {
   const [count, setCount] = useState(0)

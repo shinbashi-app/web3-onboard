@@ -10,20 +10,20 @@ For more information on Frontier, please refer to the [Frontier support](https:/
 ### Install
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/frontier
+yarn add @shinbashi/core @shinbashi/frontier
 ```
 
 or
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/frontier
+npm install @shinbashi/core @shinbashi/frontier
 ```
 
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import frontierModule from '@web3-onboard/frontier'
+import Onboard from '@shinbashi/core'
+import frontierModule from '@shinbashi/frontier'
 
 // initialize the module
 const frontier = frontierModule()

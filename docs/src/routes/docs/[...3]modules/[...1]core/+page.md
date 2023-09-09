@@ -43,14 +43,14 @@ Install the core module:
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core
+yarn add @shinbashi/core
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core
+npm install @shinbashi/core
 ```
 
   </TabPanel>
@@ -64,14 +64,14 @@ If you would like to support all wallets, then you can install all of the wallet
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/coinbase @web3-onboard/fortmatic @web3-onboard/gnosis @web3-onboard/injected-wallets @web3-onboard/arcana-auth @web3-onboard/keepkey @web3-onboard/keystone @web3-onboard/ledger @web3-onboard/magic @web3-onboard/portis @web3-onboard/react @web3-onboard/torus @web3-onboard/trezor @web3-onboard/walletconnect @web3-onboard/web3auth @web3-onboard/dcent @web3-onboard/sequence @web3-onboard/enkrypt @web3-onboard/mew-wallet @web3-onboard/uauth @web3-onboard/zeal @web3-onboard/frontier
+yarn add @shinbashi/coinbase @shinbashi/fortmatic @shinbashi/gnosis @shinbashi/injected-wallets @shinbashi/arcana-auth @shinbashi/keepkey @shinbashi/keystone @shinbashi/ledger @shinbashi/magic @shinbashi/portis @shinbashi/react @shinbashi/torus @shinbashi/trezor @shinbashi/walletconnect @shinbashi/web3auth @shinbashi/dcent @shinbashi/sequence @shinbashi/enkrypt @shinbashi/mew-wallet @shinbashi/uauth @shinbashi/zeal @shinbashi/frontier
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/coinbase @web3-onboard/fortmatic @web3-onboard/gnosis @web3-onboard/injected-wallets @web3-onboard/arcana-auth @web3-onboard/keepkey @web3-onboard/keystone @web3-onboard/ledger @web3-onboard/magic @web3-onboard/portis @web3-onboard/react @web3-onboard/torus @web3-onboard/trezor @web3-onboard/walletconnect @web3-onboard/web3auth @web3-onboard/dcent @web3-onboard/sequence @web3-onboard/enkrypt @web3-onboard/mew-wallet @web3-onboard/uauth @web3-onboard/zeal @web3-onboard/frontier
+npm install @shinbashi/coinbase @shinbashi/fortmatic @shinbashi/gnosis @shinbashi/injected-wallets @shinbashi/arcana-auth @shinbashi/keepkey @shinbashi/keystone @shinbashi/ledger @shinbashi/magic @shinbashi/portis @shinbashi/react @shinbashi/torus @shinbashi/trezor @shinbashi/walletconnect @shinbashi/web3auth @shinbashi/dcent @shinbashi/sequence @shinbashi/enkrypt @shinbashi/mew-wallet @shinbashi/uauth @shinbashi/zeal @shinbashi/frontier
 ```
 
   </TabPanel>
@@ -80,8 +80,8 @@ npm install @web3-onboard/coinbase @web3-onboard/fortmatic @web3-onboard/gnosis 
 :::admonition type=note
 
 - All wallet modules (except for `injected-wallets`) require extra dependencies and may require polyfilling the node built in modules for the browser. See the [Build Environments](#build-environments) section for more info
-- **If using React** you may be interested in checking out the React Hooks package here - https://www.npmjs.com/package/@web3-onboard/react
-- **If using Vue** you may be interested in checking out the Vue package here - https://www.npmjs.com/package/@web3-onboard/vue
+- **If using React** you may be interested in checking out the React Hooks package here - https://www.npmjs.com/package/@shinbashi/react
+- **If using Vue** you may be interested in checking out the Vue package here - https://www.npmjs.com/package/@shinbashi/vue
   :::
 
 ## Quick start
@@ -141,7 +141,7 @@ type InitOptions {
 #### wallets
 
 An array of wallet modules that you would like to be presented to the user to select from when connecting a wallet. A wallet module is an abstraction that allows for easy interaction without needing to know the specifics of how that wallet works and are separate packages that can be included.
-These modules are separate @web3-onboard packages such as `@web3-onboard/injected-wallets` or `@web3-onboard/ledger`.
+These modules are separate @shinbashi packages such as `@shinbashi/injected-wallets` or `@shinbashi/ledger`.
 For a full list click [here](#all-wallet-modules).
 
 ---
@@ -293,9 +293,9 @@ type ConnectModalOptions = {
    */
   removeIDontHaveAWalletInfoLink?: boolean
   /**
-   * @deprecated Has no effect unless `@web3-onboard/unstoppable-resolution`
+   * @deprecated Has no effect unless `@shinbashi/unstoppable-resolution`
    * package has been added and passed into the web3-onboard initialization
-   * In this case remove the `@web3-onboard/unstoppable-resolution` package
+   * In this case remove the `@shinbashi/unstoppable-resolution` package
    * to remove unstoppableDomain resolution support
    */
   disableUDResolution?: boolean
@@ -613,8 +613,8 @@ export interface UpdateNotification {
 Putting it all together, here is an example initialization with the injected wallet modules:
 
 ```ts copy
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
 
 const injected = injectedModule()
 
@@ -912,10 +912,10 @@ A limited subset of internal actions are exposed to update the Onboard state.
 For updating the wallets that are displayed in the wallet selection modal. This can be used if the wallets you want to support is conditional on another user action within your app. The `setWalletModules` action is called with an updated array of wallets (the same wallets that are passed in on initialization)
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
-import ledgerModule from '@web3-onboard/ledger'
-import trezorModule from '@web3-onboard/trezor'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
+import ledgerModule from '@shinbashi/ledger'
+import trezorModule from '@shinbashi/trezor'
 
 const injected = injectedModule()
 const ledger = ledgerModule()
@@ -955,8 +955,8 @@ The function also accepts a custom built `ThemingMap` object that contains all o
 Example:
 
 ```typescript copy
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected-wallets'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected-wallets'
 
 const injected = injectedModule()
 
@@ -1634,7 +1634,7 @@ const config = {
       },
       build: {
         rollupOptions: {
-          external: ['@web3-onboard/*'],
+          external: ['@shinbashi/*'],
           plugins: [nodePolyfills({ crypto: true, http: true })]
         },
         commonjsOptions: {
@@ -1644,9 +1644,9 @@ const config = {
       optimizeDeps: {
         exclude: ['@ethersproject/hash', 'wrtc', 'http'],
         include: [
-          '@web3-onboard/core',
-          '@web3-onboard/gas',
-          '@web3-onboard/sequence',
+          '@shinbashi/core',
+          '@shinbashi/gas',
+          '@shinbashi/sequence',
           'js-sha3',
           '@ethersproject/bignumber'
         ]
@@ -1718,7 +1718,7 @@ const config: UserConfig = {
   },
   build: {
     rollupOptions: {
-      external: ['@web3-onboard/*'],
+      external: ['@shinbashi/*'],
       plugins: [
         nodePolyfills({ include: ['crypto', 'http'] }),
         inject({ Buffer: ['Buffer', 'Buffer'] })
@@ -1731,9 +1731,9 @@ const config: UserConfig = {
   optimizeDeps: {
     exclude: ['@ethersproject/hash', 'wrtc', 'http'],
     include: [
-      '@web3-onboard/core',
-      '@web3-onboard/gas',
-      '@web3-onboard/sequence',
+      '@shinbashi/core',
+      '@shinbashi/gas',
+      '@shinbashi/sequence',
       'js-sha3',
       '@ethersproject/bignumber'
     ],
@@ -1806,7 +1806,7 @@ export default {
   },
   build: {
     rollupOptions: {
-      external: ['@web3-onboard/*'],
+      external: ['@shinbashi/*'],
       plugins: [
         nodePolyfills({ include: ['crypto', 'http'] }),
         inject({ Buffer: ['Buffer', 'Buffer'] })
@@ -1819,9 +1819,9 @@ export default {
   optimizeDeps: {
     exclude: ['@ethersproject/hash', 'wrtc', 'http'],
     include: [
-      '@web3-onboard/core',
-      '@web3-onboard/gas',
-      '@web3-onboard/sequence',
+      '@shinbashi/core',
+      '@shinbashi/gas',
+      '@shinbashi/sequence',
       'js-sha3',
       '@ethersproject/bignumber'
     ],

@@ -1,10 +1,10 @@
-# @web3-onboard/fortmatic
+# @shinbashi/fortmatic
 
 ## Wallet module for connecting Fortmatic to web3-onboard
 
 ### Install
 
-`npm i @web3-onboard/fortmatic`
+`npm i @shinbashi/fortmatic`
 
 ## Options
 
@@ -17,8 +17,8 @@ type FortmaticOptions = {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import fortmaticModule from '@web3-onboard/fortmatic'
+import Onboard from '@shinbashi/core'
+import fortmaticModule from '@shinbashi/fortmatic'
 
 const fortmatic = fortmaticModule({ apiKey: 'API_KEY' })
 

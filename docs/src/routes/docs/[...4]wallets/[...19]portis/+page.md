@@ -12,14 +12,14 @@ Wallet module for connecting Portis wallet to web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/portis
+yarn add @shinbashi/portis
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/portis
+npm install @shinbashi/portis
 ```
 
   </TabPanel>
@@ -36,8 +36,8 @@ type PortisOptions {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import portisModule from '@web3-onboard/portis'
+import Onboard from '@shinbashi/core'
+import portisModule from '@shinbashi/portis'
 
 const portis = portisModule({ apiKey: 'API_KEY' })
 

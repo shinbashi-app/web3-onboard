@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import web3Onboard from '../web3-onboard'
-import { Web3OnboardProvider } from '@web3-onboard/react'
+import { Web3OnboardProvider } from '@shinbashi/react'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

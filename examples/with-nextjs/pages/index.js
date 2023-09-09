@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import { useConnectWallet } from '@web3-onboard/react'
+import { useConnectWallet } from '@shinbashi/react'
 import { ethers } from 'ethers'
 
 const buttonStyles = {
@@ -41,11 +41,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to this demo of
-          <a href="https://onboard.blocknative.com">
-            {' '}
-            Web3-Onboard
-          </a>
-          !
+          <a href="https://onboard.blocknative.com"> Web3-Onboard</a>!
         </h1>
         <button
           style={buttonStyles}

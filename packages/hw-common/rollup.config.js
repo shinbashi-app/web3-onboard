@@ -35,11 +35,5 @@ export default {
       inlineSources: !production
     })
   ],
-  external: [
-    'joi',
-    'rxjs',
-    'ethers',
-    '@ethereumjs/common',
-    '@web3-onboard/common'
-  ]
+  external: ['joi', 'rxjs', 'ethers', '@ethereumjs/common', '@shinbashi/common']
 }

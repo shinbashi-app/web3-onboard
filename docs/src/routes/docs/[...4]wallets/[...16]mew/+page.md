@@ -5,7 +5,7 @@ title: Mew
 # {$frontmatter.title}
 
 :::admonition type=warning
-_Wallet module for connecting Mew to web3-onboard is now deprecated. Please use [@web3-onboard/mew-wallet](../../wallets/mewwallet.md)_
+_Wallet module for connecting Mew to web3-onboard is now deprecated. Please use [@shinbashi/mew-wallet](../../wallets/mewwallet.md)_
 :::
 
 Wallet module for connecting Mew wallet to web3-onboard
@@ -16,14 +16,14 @@ Wallet module for connecting Mew wallet to web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/mew
+yarn add @shinbashi/mew
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/mew
+npm install @shinbashi/mew
 ```
 
   </TabPanel>
@@ -32,8 +32,8 @@ npm install @web3-onboard/mew
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import mewModule from '@web3-onboard/mew'
+import Onboard from '@shinbashi/core'
+import mewModule from '@shinbashi/mew'
 
 const mew = mewModule()
 

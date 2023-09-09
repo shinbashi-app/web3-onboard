@@ -1,20 +1,20 @@
-# @web3-onboard/unstoppable-resolution
+# @shinbashi/unstoppable-resolution
 
 ## A module to add Unstoppable Domain resolution to web3-onboard.
 
 ### Install
 
 **NPM**
-`npm i @web3-onboard/unstoppable-resolution`
+`npm i @shinbashi/unstoppable-resolution`
 
 **Yarn**
-`yarn add @web3-onboard/unstoppable-resolution`
+`yarn add @shinbashi/unstoppable-resolution`
 
 ### Standalone Setup
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import unstoppableResolution from '@web3-onboard/unstoppable-resolution'
+import Onboard from '@shinbashi/core'
+import unstoppableResolution from '@shinbashi/unstoppable-resolution'
 
 const onboard = Onboard({
   // ... other Onboard options

@@ -1,5 +1,5 @@
 import type Common from '@ethereumjs/common'
-import type { EIP1193Provider, RPCResponse } from '@web3-onboard/common'
+import type { EIP1193Provider, RPCResponse } from '@shinbashi/common'
 import type { CustomNetwork } from './types.js'
 import type { BigNumber, providers } from 'ethers'
 
@@ -72,16 +72,16 @@ export const bigNumberFieldsToStrings = (
       ...transaction,
       ...((
         transaction[
-          txnProperty as keyof providers.TransactionRequest
+        txnProperty as keyof providers.TransactionRequest
         ] as BigNumber
       ).toHexString
         ? {
-            [txnProperty]: (
-              transaction[
-                txnProperty as keyof providers.TransactionRequest
-              ] as BigNumber
-            ).toHexString()
-          }
+          [txnProperty]: (
+            transaction[
+            txnProperty as keyof providers.TransactionRequest
+            ] as BigNumber
+          ).toHexString()
+        }
         : {})
     }),
     transaction

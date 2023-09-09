@@ -12,14 +12,14 @@ title: Torus
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/torus
+yarn add @shinbashi/torus
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/torus
+npm install @shinbashi/torus
 ```
 
   </TabPanel>
@@ -32,8 +32,8 @@ See the [Torus Docs](https://docs.tor.us/wallet/api-reference/class) for the ext
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import torusModule from '@web3-onboard/torus'
+import Onboard from '@shinbashi/core'
+import torusModule from '@shinbashi/torus'
 
 const torus = torusModule()
 

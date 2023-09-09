@@ -1,4 +1,4 @@
-import type { WalletInit, EIP1193Provider } from '@web3-onboard/common'
+import type { WalletInit, EIP1193Provider } from '@shinbashi/common'
 
 function mew(): WalletInit {
   return () => {
@@ -10,7 +10,7 @@ function mew(): WalletInit {
           createEIP1193Provider,
           ProviderRpcError,
           ProviderRpcErrorCode
-        } = await import('@web3-onboard/common')
+        } = await import('@shinbashi/common')
 
         const { firstValueFrom, fromEvent } = await import('rxjs')
         const { map, take } = await import('rxjs/operators')
@@ -69,6 +69,6 @@ function mew(): WalletInit {
 }
 
 /**
- * @deprecated Use @web3-onboard/mew-wallet
+ * @deprecated Use @shinbashi/mew-wallet
  */
 export default mew

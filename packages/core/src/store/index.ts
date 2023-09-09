@@ -3,7 +3,7 @@ import { distinctUntilKeyChanged, pluck, filter } from 'rxjs/operators'
 import { locale } from 'svelte-i18n'
 import { APP_INITIAL_STATE } from '../constants.js'
 import { notNullish } from '../utils.js'
-import type { Chain, WalletModule } from '@web3-onboard/common'
+import type { Chain, WalletModule } from '@shinbashi/common'
 
 import type {
   AppState,
@@ -51,7 +51,7 @@ function reducer(state: AppState, action: Action): AppState {
         ...state,
         chains: [...state.chains, ...(payload as Chain[])]
       }
-    
+
     case UPDATE_CHAINS: {
       const updatedChain = payload as UpdateChainsAction['payload']
       const chains = state.chains

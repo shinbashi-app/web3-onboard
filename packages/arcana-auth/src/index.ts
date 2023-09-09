@@ -1,4 +1,4 @@
-import { createEIP1193Provider, WalletInit } from '@web3-onboard/common'
+import { createEIP1193Provider, WalletInit } from '@shinbashi/common'
 import icon from './icon.js'
 import type { ConstructorParams } from '@arcana/auth/types'
 

@@ -16,14 +16,14 @@ For any questions or issues related to integration with Zeal wallet do not hesit
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/zeal
+yarn add @shinbashi/core @shinbashi/zeal
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/zeal
+npm install @shinbashi/core @shinbashi/zeal
 ```
 
   </TabPanel>
@@ -32,8 +32,8 @@ npm install @web3-onboard/core @web3-onboard/zeal
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import zealWalletModule from '@web3-onboard/zeal'
+import Onboard from '@shinbashi/core'
+import zealWalletModule from '@shinbashi/zeal'
 
 // initialize the module with options
 const zealWalletSdk = zealWalletModule()

@@ -1,4 +1,4 @@
-import type { Chain, Platform, WalletInit } from '@web3-onboard/common'
+import type { Chain, Platform, WalletInit } from '@shinbashi/common'
 import type { StaticJsonRpcProvider } from '@ethersproject/providers'
 import type { ETHAccountPath } from '@shapeshiftoss/hdwallet-core'
 import type { KeepKeyHDWallet } from '@shapeshiftoss/hdwallet-keepkey'
@@ -7,7 +7,7 @@ import type {
   ScanAccountsOptions,
   Account,
   Asset
-} from '@web3-onboard/hw-common'
+} from '@shinbashi/hw-common'
 
 const DEFAULT_PATH = `m/44'/60'/0'/0/0`
 
@@ -77,15 +77,15 @@ function keepkey({
         } = await import('@shapeshiftoss/hdwallet-core')
 
         const { createEIP1193Provider, ProviderRpcError } = await import(
-          '@web3-onboard/common'
+          '@shinbashi/common'
         )
 
         const { accountSelect, entryModal } = await import(
-          '@web3-onboard/hw-common'
+          '@shinbashi/hw-common'
         )
 
         const { bigNumberFieldsToStrings, getHardwareWalletProvider } =
-          await import('@web3-onboard/hw-common')
+          await import('@shinbashi/hw-common')
 
         const { utils } = await import('ethers')
 
@@ -300,9 +300,9 @@ function keepkey({
             message:
               message.slice(0, 2) === '0x'
                 ? // @ts-ignore - commonjs weirdness
-                  (ethUtil.default || ethUtil)
-                    .toBuffer(message)
-                    .toString('utf8')
+                (ethUtil.default || ethUtil)
+                  .toBuffer(message)
+                  .toString('utf8')
                 : message
           })
 
@@ -390,10 +390,10 @@ function keepkey({
               !transactionObject || !transactionObject.hasOwnProperty('from')
                 ? accounts[0]
                 : (accounts.find(
-                    account =>
-                      account.address.toLocaleLowerCase() ===
-                      transactionObject.from.toLocaleLowerCase()
-                  ) as Account)
+                  account =>
+                    account.address.toLocaleLowerCase() ===
+                    transactionObject.from.toLocaleLowerCase()
+                ) as Account)
 
             const { derivationPath, address } = account
             const addressNList = bip32ToAddressNList(derivationPath)
@@ -425,12 +425,12 @@ function keepkey({
 
             const gasData = gasPrice
               ? {
-                  gasPrice
-                }
+                gasPrice
+              }
               : {
-                  maxFeePerGas,
-                  maxPriorityFeePerGas
-                }
+                maxFeePerGas,
+                maxPriorityFeePerGas
+              }
 
             const txn = {
               addressNList,
@@ -445,7 +445,7 @@ function keepkey({
 
             let serialized
             try {
-              ;({ serialized } = await keepKeyWallet.ethSignTx(txn))
+              ; ({ serialized } = await keepKeyWallet.ethSignTx(txn))
             } catch (error: any) {
               if (error.message && error.message.message) {
                 throw new Error(error.message.message)

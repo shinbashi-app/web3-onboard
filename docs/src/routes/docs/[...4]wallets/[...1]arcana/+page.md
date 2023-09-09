@@ -22,14 +22,14 @@ For details, see [Quick Start Guide](https://docs.arcana.network/auth-quick-star
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/arcana-auth
+yarn add @shinbashi/core @shinbashi/arcana-auth
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/arcana-auth
+npm install @shinbashi/core @shinbashi/arcana-auth
 ```
 
   </TabPanel>
@@ -38,8 +38,8 @@ npm install @web3-onboard/core @web3-onboard/arcana-auth
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import arcanaAuthModule from '@web3-onboard/arcana-auth'
+import Onboard from '@shinbashi/core'
+import arcanaAuthModule from '@shinbashi/arcana-auth'
 
 // initialize the module
 const arcanaAuth = arcanaAuthModule({
@@ -49,7 +49,7 @@ const arcanaAuth = arcanaAuthModule({
 const onboard = Onboard({
   // ... other Onboard options
   wallets: [
-    arcanaAuth,
+    arcanaAuth
     //... other wallets
   ]
 })

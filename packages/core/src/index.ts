@@ -14,7 +14,7 @@ import type {
 import { APP_INITIAL_STATE, STORAGE_KEYS } from './constants.js'
 import { configuration, updateConfiguration } from './configuration.js'
 import updateBalances from './update-balances.js'
-import { chainIdToHex, getLocalStore, setLocalStore } from './utils.js'
+import { getLocalStore, setLocalStore } from './utils.js'
 import { preflightNotifications } from './preflight-notifications.js'
 
 import {
@@ -24,7 +24,6 @@ import {
 } from './validation.js'
 
 import {
-  addChains,
   updateAccountCenter,
   updateNotify,
   customNotification,
@@ -35,7 +34,7 @@ import {
   updateTheme,
   updateAppMetadata
 } from './store/actions.js'
-import type { PatchedEIP1193Provider } from '@web3-onboard/transaction-preview'
+import type { PatchedEIP1193Provider } from '@shinbashi/transaction-preview'
 import { getBlocknativeSdk } from './services.js'
 
 const API = {
@@ -78,7 +77,7 @@ export type {
   Theme
 } from './types.js'
 
-export type { EIP1193Provider } from '@web3-onboard/common'
+export type { EIP1193Provider } from '@shinbashi/common'
 
 function init(options: InitOptions): OnboardAPI {
   if (typeof window === 'undefined') return API
@@ -93,7 +92,6 @@ function init(options: InitOptions): OnboardAPI {
 
   const {
     wallets,
-    chains,
     appMetadata,
     i18n,
     accountCenter,
@@ -119,7 +117,6 @@ function init(options: InitOptions): OnboardAPI {
   }
 
   initI18N(i18n)
-  addChains(chainIdToHex(chains))
 
   if (typeof connect !== undefined) {
     updateConnectModal(connect)
@@ -294,7 +291,7 @@ const fontFamilyExternallyDefined = (
 }
 
 const importInterFont = async (): Promise<void> => {
-  const { InterVar } = await import('@web3-onboard/common')
+  const { InterVar } = await import('@shinbashi/common')
   // Add Fonts to main page
   const styleEl = document.createElement('style')
 
@@ -319,7 +316,7 @@ const connectAllPreviousWallets = async (
     activeWalletsList.push(parsedWalletList[0])
   } else {
     // Loop in reverse to maintain wallet order
-    for (let i = parsedWalletList.length; i--; ) {
+    for (let i = parsedWalletList.length; i--;) {
       const walletConnectionPromise = await API.connectWallet({
         autoSelect: { label: parsedWalletList[i], disableModals: true }
       })

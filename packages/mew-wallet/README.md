@@ -1,20 +1,20 @@
-# @web3-onboard/mew-wallet
+# @shinbashi/mew-wallet
 
 ## Wallet module for connecting Mew wallet through web3-onboard
 
 ### Install
 
 **NPM**
-`npm i @web3-onboard/core @web3-onboard/mew-wallet`
+`npm i @shinbashi/core @shinbashi/mew-wallet`
 
 **Yarn**
-`yarn add @web3-onboard/core @web3-onboard/mew-wallet`
+`yarn add @shinbashi/core @shinbashi/mew-wallet`
 
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import mewWallet from '@web3-onboard/mew-wallet'
+import Onboard from '@shinbashi/core'
+import mewWallet from '@shinbashi/mew-wallet'
 
 const mewWalletModule = mewWallet()
 

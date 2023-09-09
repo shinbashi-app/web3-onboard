@@ -1,5 +1,5 @@
-import type { WalletInit } from '@web3-onboard/common'
-import { createEIP1193Provider } from '@web3-onboard/common'
+import type { WalletInit } from '@shinbashi/common'
+import { createEIP1193Provider } from '@shinbashi/common'
 import { CustomWindow } from './types.js'
 declare const window: CustomWindow
 
@@ -14,7 +14,7 @@ function XDEFIWallet(): WalletInit {
       },
       getIcon: async () => (await import('./icon.js')).default,
       getInterface: async () => {
-       let provider
+        let provider
         if (window.xfi && window.xfi.ethereum) {
           provider = window.xfi.ethereum
         }

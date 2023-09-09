@@ -3,14 +3,14 @@ import type {
   EIP1193Provider,
   ProviderAccounts,
   WalletInit
-} from '@web3-onboard/common'
+} from '@shinbashi/common'
 
 import type { Web3AuthOptions, ModalConfig } from '@web3auth/modal'
 import type { CustomChainConfig } from '@web3auth/base'
 
 type Web3AuthModuleOptions = Omit<Web3AuthOptions, 'chainConfig'> & {
   chainConfig?: Partial<CustomChainConfig> &
-    Pick<CustomChainConfig, 'chainNamespace'>
+  Pick<CustomChainConfig, 'chainNamespace'>
   modalConfig?: Record<string, ModalConfig> | undefined
   /**
    * @deprecated use web3Auth native Z-Index config through
@@ -29,7 +29,7 @@ function web3auth(options: Web3AuthModuleOptions): WalletInit {
         '@web3auth/base'
       )
       const { createEIP1193Provider, ProviderRpcError, ProviderRpcErrorCode } =
-        await import('@web3-onboard/common')
+        await import('@shinbashi/common')
 
       const emitter = new EventEmitter()
 
@@ -59,8 +59,8 @@ function web3auth(options: Web3AuthModuleOptions): WalletInit {
       const modalZIndex = loginModalZIndex
         ? loginModalZIndex
         : options.uiConfig && options.uiConfig.modalZIndex
-        ? options.uiConfig.modalZIndex
-        : '50'
+          ? options.uiConfig.modalZIndex
+          : '50'
 
       const web3authCoreOptions: Web3AuthOptions = {
         ...options,

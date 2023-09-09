@@ -1,5 +1,5 @@
 <script setup>
-import { useOnboard } from '@web3-onboard/vue'
+import { useOnboard } from '@shinbashi/vue'
 
 import { ethers } from 'ethers'
 

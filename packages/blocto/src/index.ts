@@ -1,4 +1,4 @@
-import type { WalletInit } from '@web3-onboard/common'
+import type { WalletInit } from '@shinbashi/common'
 
 function BloctoWallet(): WalletInit {
   if (typeof window === 'undefined') return () => null
@@ -9,7 +9,7 @@ function BloctoWallet(): WalletInit {
       getInterface: async ({ chains }) => {
         const { default: BloctoSDK } = await import('@blocto/sdk')
 
-        const { createEIP1193Provider } = await import('@web3-onboard/common')
+        const { createEIP1193Provider } = await import('@shinbashi/common')
 
         const [defaultChain] = chains
 

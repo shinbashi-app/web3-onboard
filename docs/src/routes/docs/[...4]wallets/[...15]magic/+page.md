@@ -23,14 +23,14 @@ The Magic Module currently only supports email login but we are open to expand t
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/magic
+yarn add @shinbashi/magic
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/magic
+npm install @shinbashi/magic
 ```
 
   </TabPanel>
@@ -48,8 +48,8 @@ type MagicInitOptions = {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import magicModule from '@web3-onboard/magic'
+import Onboard from '@shinbashi/core'
+import magicModule from '@shinbashi/magic'
 
 const magic = magicModule({
   apiKey: 'API_KEY',

@@ -12,14 +12,14 @@ Wallet module for connecting Safe to web3-onboard
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/gnosis @safe-global/safe-apps-provider @safe-global/safe-apps-sdk
+yarn add @shinbashi/gnosis @safe-global/safe-apps-provider @safe-global/safe-apps-sdk
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/gnosis @safe-global/safe-apps-provider @safe-global/safe-apps-sdk
+npm install @shinbashi/gnosis @safe-global/safe-apps-provider @safe-global/safe-apps-sdk
 ```
 
   </TabPanel>
@@ -36,8 +36,8 @@ type GnosisOptions = {
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import safeModule from '@web3-onboard/gnosis'
+import Onboard from '@shinbashi/core'
+import safeModule from '@shinbashi/gnosis'
 
 const safe = safeModule()
 

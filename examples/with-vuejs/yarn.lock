@@ -1010,21 +1010,21 @@
   dependencies:
     vue-demi "*"
 
-"@web3-onboard/common@^2.3.3":
+"@shinbashi/common@^2.3.3":
   version "2.3.3"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/common/-/common-2.3.3.tgz#02096e967dbed272c0637cda955902b96a0fce06"
+  resolved "https://registry.yarnpkg.com/@shinbashi/common/-/common-2.3.3.tgz#02096e967dbed272c0637cda955902b96a0fce06"
   integrity sha512-Ytppszqe77VY8WglRdr/Lfx+HmcZ2hXQEkBA23JaVYmzKvP/mC6j+sjGUD8CgXDpRRxyKoiRj6nz95GRABie6Q==
   dependencies:
     bignumber.js "^9.1.0"
     ethers "5.5.4"
     joi "17.9.1"
 
-"@web3-onboard/core@^2.20.0":
+"@shinbashi/core@^2.20.0":
   version "2.20.0"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/core/-/core-2.20.0.tgz#e023cdfc21a496acbf23730e469ee9d11167faa3"
+  resolved "https://registry.yarnpkg.com/@shinbashi/core/-/core-2.20.0.tgz#e023cdfc21a496acbf23730e469ee9d11167faa3"
   integrity sha512-YAVRwoP7QjRJREiMtuDbNWzOwjR59QvIEH7Jl14TpwpIgx0WIGegQK7yJnmZIyWZpHZELof2m6HoFAEy6OjFpA==
   dependencies:
-    "@web3-onboard/common" "^2.3.3"
+    "@shinbashi/common" "^2.3.3"
     bignumber.js "^9.0.0"
     bnc-sdk "^4.6.7"
     bowser "^2.11.0"
@@ -1038,24 +1038,24 @@
     svelte "^3.49.0"
     svelte-i18n "^3.3.13"
 
-"@web3-onboard/injected-wallets@^2.8.3-alpha.1":
+"@shinbashi/injected-wallets@^2.8.3-alpha.1":
   version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/injected-wallets/-/injected-wallets-2.9.0.tgz#e074dbc48516edf82f235c09fa936b18be19e533"
+  resolved "https://registry.yarnpkg.com/@shinbashi/injected-wallets/-/injected-wallets-2.9.0.tgz#e074dbc48516edf82f235c09fa936b18be19e533"
   integrity sha512-GrbbodUVqguBxf9YDz+DlIGYJ2wSBdwj8/2C4QMMcCbnx5NtSlamSXiRQngTMn7AIm4fnSHOwdyAeEi8Q/k2fg==
   dependencies:
-    "@web3-onboard/common" "^2.3.3"
+    "@shinbashi/common" "^2.3.3"
     joi "17.9.1"
     lodash.uniqby "^4.7.0"
 
-"@web3-onboard/vue@^2.5.7-alpha.3":
+"@shinbashi/vue@^2.5.7-alpha.3":
   version "2.7.4"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/vue/-/vue-2.7.4.tgz#36b192d8ea121f0585b9dac22e6dc75039412747"
+  resolved "https://registry.yarnpkg.com/@shinbashi/vue/-/vue-2.7.4.tgz#36b192d8ea121f0585b9dac22e6dc75039412747"
   integrity sha512-mkQ/XimBKPrgo0g/2wvTVTbpuUBM6WkqUvxdXLh6GGcmIoJM2n1C76EcV4D0QT91O5igWgjxFj++Xjvp4qaOBw==
   dependencies:
     "@vueuse/core" "^8.4.2"
     "@vueuse/rxjs" "^8.2.0"
-    "@web3-onboard/common" "^2.3.3"
-    "@web3-onboard/core" "^2.20.0"
+    "@shinbashi/common" "^2.3.3"
+    "@shinbashi/core" "^2.20.0"
     vue-demi "^0.12.4"
 
 acorn-jsx@^5.3.2:

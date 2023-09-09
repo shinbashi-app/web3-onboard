@@ -12,14 +12,14 @@ title: Dcent
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/dcent
+yarn add @shinbashi/dcent
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/dcent
+npm install @shinbashi/dcent
 ```
 
   </TabPanel>
@@ -28,8 +28,8 @@ npm install @web3-onboard/dcent
 ### Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import dcentModule from '@web3-onboard/dcent'
+import Onboard from '@shinbashi/core'
+import dcentModule from '@shinbashi/dcent'
 
 const dcent = dcentModule()
 

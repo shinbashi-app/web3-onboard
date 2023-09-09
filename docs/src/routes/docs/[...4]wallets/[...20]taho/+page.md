@@ -14,14 +14,14 @@ See [Taho Developer Docs](https://docs.tally.cash/tally/developers/integrating-d
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/taho
+yarn add @shinbashi/core @shinbashi/taho
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/taho
+npm install @shinbashi/core @shinbashi/taho
 ```
 
   </TabPanel>
@@ -30,8 +30,8 @@ npm install @web3-onboard/core @web3-onboard/taho
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import tahoWalletModule from '@web3-onboard/taho'
+import Onboard from '@shinbashi/core'
+import tahoWalletModule from '@shinbashi/taho'
 
 const onboard = Onboard({
   // ... other Onboard options

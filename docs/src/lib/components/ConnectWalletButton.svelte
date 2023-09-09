@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import type { OnboardAPI, WalletState } from '@web3-onboard/core'
+  import type { OnboardAPI, WalletState } from '@shinbashi/core'
   import getOnboard from '$lib/services/onboard.js'
   import { Button } from '@svelteness/kit-docs'
   let onboard: OnboardAPI

@@ -1767,21 +1767,21 @@
     "@walletconnect/window-getters" "^1.0.1"
     tslib "1.14.1"
 
-"@web3-onboard/common@^2.3.3":
+"@shinbashi/common@^2.3.3":
   version "2.3.3"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/common/-/common-2.3.3.tgz#02096e967dbed272c0637cda955902b96a0fce06"
+  resolved "https://registry.yarnpkg.com/@shinbashi/common/-/common-2.3.3.tgz#02096e967dbed272c0637cda955902b96a0fce06"
   integrity sha512-Ytppszqe77VY8WglRdr/Lfx+HmcZ2hXQEkBA23JaVYmzKvP/mC6j+sjGUD8CgXDpRRxyKoiRj6nz95GRABie6Q==
   dependencies:
     bignumber.js "^9.1.0"
     ethers "5.5.4"
     joi "17.9.1"
 
-"@web3-onboard/core@^2.17.0":
+"@shinbashi/core@^2.17.0":
   version "2.20.2"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/core/-/core-2.20.2.tgz#06c35b2d39a119950d3d850d23e2126f6f77c1f5"
+  resolved "https://registry.yarnpkg.com/@shinbashi/core/-/core-2.20.2.tgz#06c35b2d39a119950d3d850d23e2126f6f77c1f5"
   integrity sha512-XrdOatA00ULnPleQbAbXppGGVErUZpscrauoXy/Zt8qpr7i+NQSeRD2/fllfx5JP6wI0whP8ZoVb9yRp52Ii0Q==
   dependencies:
-    "@web3-onboard/common" "^2.3.3"
+    "@shinbashi/common" "^2.3.3"
     bignumber.js "^9.0.0"
     bnc-sdk "^4.6.7"
     bowser "^2.11.0"
@@ -1795,18 +1795,18 @@
     svelte "^3.49.0"
     svelte-i18n "^3.3.13"
 
-"@web3-onboard/injected-wallets@^2.8.5":
+"@shinbashi/injected-wallets@^2.8.5":
   version "2.10.1"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/injected-wallets/-/injected-wallets-2.10.1.tgz#d4a45ba897c578819544805399761c61b8173166"
+  resolved "https://registry.yarnpkg.com/@shinbashi/injected-wallets/-/injected-wallets-2.10.1.tgz#d4a45ba897c578819544805399761c61b8173166"
   integrity sha512-PhmMI+RNeGowL2cfmp7/v3atrJ8KsjKXgXs6CofwMzDxQXfu1DwXdIh+Hd2Py/ZeRgOEeAehf63gftaVvfn/9g==
   dependencies:
-    "@web3-onboard/common" "^2.3.3"
+    "@shinbashi/common" "^2.3.3"
     joi "17.9.1"
     lodash.uniqby "^4.7.0"
 
-"@web3-onboard/walletconnect@^2.3.6":
+"@shinbashi/walletconnect@^2.3.6":
   version "2.3.9"
-  resolved "https://registry.yarnpkg.com/@web3-onboard/walletconnect/-/walletconnect-2.3.9.tgz#a569db39db61c927fee70744c5fcf015dad47042"
+  resolved "https://registry.yarnpkg.com/@shinbashi/walletconnect/-/walletconnect-2.3.9.tgz#a569db39db61c927fee70744c5fcf015dad47042"
   integrity sha512-0n1UesJLNNU33j/I0X4QHVL8AhFb6Oyo/ZU3EEYeDBev2Cis1A6Bvl38BfmeBBMdBOZBxeTOC2kNeRjvvvpzhA==
   dependencies:
     "@ethersproject/providers" "5.5.0"
@@ -1814,7 +1814,7 @@
     "@walletconnect/ethereum-provider" "2.8.0"
     "@walletconnect/modal" "2.4.3"
     "@walletconnect/qrcode-modal" "^1.8.0"
-    "@web3-onboard/common" "^2.3.3"
+    "@shinbashi/common" "^2.3.3"
     rxjs "^7.5.2"
 
 "@web3modal/core@2.4.3":

@@ -27,14 +27,14 @@ Full Simulation Platform API documentation can be found [here](https://docs.bloc
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-preview
+yarn add @shinbashi/core @shinbashi/injected @shinbashi/transaction-preview
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm i @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-preview
+npm i @shinbashi/core @shinbashi/injected @shinbashi/transaction-preview
 ```
 
   </TabPanel>
@@ -47,9 +47,9 @@ npm i @web3-onboard/core @web3-onboard/injected @web3-onboard/transaction-previe
 To use the Transaction Preview package with web3-onboard all a developer needs to do is initialize web3-onboard with their [Blocknative API key](https://onboard.blocknative.com/docs/overview/introduction#optional-use-an-api-key-to-fetch-real-time-transaction-data-balances-gas) and pass in the module as shown below.
 
 ```typescript copy
-import Onboard from '@web3-onboard/core'
-import injectedModule from '@web3-onboard/injected'
-import transactionPreviewModule from '@web3-onboard/transaction-preview'
+import Onboard from '@shinbashi/core'
+import injectedModule from '@shinbashi/injected'
+import transactionPreviewModule from '@shinbashi/transaction-preview'
 
 const injected = injectedModule()
 const transactionPreview = transactionPreviewModule(
@@ -86,14 +86,14 @@ const onboard = Onboard({
 
 To use the Transaction Preview package without web3-onboard all a developer needs to do is:
 
-- Execute the entry function from the `@web3-onboard/transaction-preview` package and optional params
+- Execute the entry function from the `@shinbashi/transaction-preview` package and optional params
 - Run the returned `init` function with their [Blocknative API key](https://onboard.blocknative.com/docs/overview/introduction#optional-use-an-api-key-to-fetch-real-time-transaction-data-balances-gas), an initialized instance of their [Blocknative SDK](https://www.npmjs.com/package/bnc-sdk) and a containerElement string with the html ID of the target element to append the visualization to
 - Finally pass a transaction meant for a wallet provider (created using libraries like Ethers or Web3)
 
 With the above steps a UI will be rendered with the balance changes and gas used.
 
 ```typescript copy
-import transactionPreviewModule from '@web3-onboard/transaction-preview'
+import transactionPreviewModule from '@shinbashi/transaction-preview'
 
 const {init, previewTransaction} = transactionPreviewModule({
   // Optional: Require balance change approval prior to sending transaction to wallet

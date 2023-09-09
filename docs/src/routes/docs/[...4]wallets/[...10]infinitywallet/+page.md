@@ -16,14 +16,14 @@ Checkout the official [Infinity Wallet page](https://infinitywallet.io/) for det
 <TabPanel value="yarn">
 
 ```sh copy
-yarn add @web3-onboard/core @web3-onboard/infinity-wallet
+yarn add @shinbashi/core @shinbashi/infinity-wallet
 ```
 
   </TabPanel>
   <TabPanel value="npm">
 
 ```sh copy
-npm install @web3-onboard/core @web3-onboard/infinity-wallet
+npm install @shinbashi/core @shinbashi/infinity-wallet
 ```
 
   </TabPanel>
@@ -32,8 +32,8 @@ npm install @web3-onboard/core @web3-onboard/infinity-wallet
 ## Usage
 
 ```typescript
-import Onboard from '@web3-onboard/core'
-import infinityWalletWalletModule from '@web3-onboard/infinity-wallet'
+import Onboard from '@shinbashi/core'
+import infinityWalletWalletModule from '@shinbashi/infinity-wallet'
 
 // initialize the module with options
 const infinityWalletSDK = infinityWalletWalletModule()

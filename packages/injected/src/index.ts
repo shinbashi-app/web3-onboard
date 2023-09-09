@@ -1,5 +1,5 @@
 import uniqBy from 'lodash.uniqby'
-import type { WalletInit } from '@web3-onboard/common'
+import type { WalletInit } from '@shinbashi/common'
 import { ProviderLabel } from './types.js'
 import standardWallets from './wallets.js'
 import { validateWalletOptions } from './validation.js'
@@ -97,17 +97,17 @@ function injected(options?: InjectedWalletOptions): WalletInit {
                 displayUnavailable.includes(wallet.label))) &&
               !walletAvailable
               ? {
-                  ...wallet,
-                  getInterface: async () => {
-                    throw new Error(
-                      walletUnavailableMessage
-                        ? walletUnavailableMessage(wallet)
-                        : defaultWalletUnavailableMsg(wallet)
-                    )
-                  }
+                ...wallet,
+                getInterface: async () => {
+                  throw new Error(
+                    walletUnavailableMessage
+                      ? walletUnavailableMessage(wallet)
+                      : defaultWalletUnavailableMsg(wallet)
+                  )
                 }
+              }
               : // otherwise add wallet to list as is
-                wallet
+              wallet
           )
         }
 
